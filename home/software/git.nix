@@ -1,6 +1,10 @@
 { pkgs, ... }:
 
 {
+  programs.git-credential-oauth = {
+    enable = true;
+  };
+
   programs.git = {
     enable = true;
     package = pkgs.gitFull;
@@ -12,6 +16,15 @@
       };
       init = {
         defaultBranch = "main";
+      };
+      credential = {
+        "https://git.alisaqaq.moe" = {
+          oauthClientId = "30bc96d0d822cbd8ba7e97cb9a39e748b68be3cd8d80b7c3c0733c2fd0489cfa";
+          oauthScopes = "read_repository write_repository";
+          oauthAuthURL = "/oauth/authorize";
+          oauthTokenURL = "/oauth/token";
+          oauthDeviceAuthURL = "/oauth/authorize_device";
+        };
       };
     };
     signing = {
