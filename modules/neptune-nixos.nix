@@ -6,16 +6,19 @@
     inputs.home-manager.nixosModules.home-manager
 
     # Core Modules
+    ./core/bootloader.nix
+    ./core/fonts.nix
+    ./core/gnome.nix
+    ./core/networkmanager.nix
+    ./core/pipewire.nix
     ./core/programs.nix
-    ./core/user.nix
     ./core/security.nix
+    ./core/services.nix
     ./core/system.nix
+    ./core/user.nix
   ];
 
   home-manager.users.alisa.imports = [
-    ./home/hyprland
-
-    ./home/desktop-software.nix
     ./home/git.nix
     ./home/zsh.nix
   ];

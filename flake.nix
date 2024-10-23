@@ -10,6 +10,8 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    inputs.hyprland.url = "github:hyprwm/Hyprland";
   };
 
   outputs =

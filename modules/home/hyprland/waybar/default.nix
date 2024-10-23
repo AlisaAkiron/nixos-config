@@ -2,7 +2,6 @@
 
 {
   imports = [
-    ./git.nix
-    ./zsh.nix
+    ./waybar.nix
   ];
 }
