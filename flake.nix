@@ -15,10 +15,7 @@
   outputs =
     { nixpkgs, ... }@inputs:
     {
-      formatter.x86_64-linux = inputs.nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
-
       nixosConfigurations = {
-
         # NixOS (With Desktop) x86_64
         neptune = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";

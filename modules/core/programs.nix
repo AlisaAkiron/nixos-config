@@ -27,8 +27,8 @@
     ## Network
     iperf
 
-    # Nix LSP
-    nil
+    # Nix IDE
+    nixd
     nixfmt-rfc-style
   ];
 }
