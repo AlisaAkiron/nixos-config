@@ -1,14 +1,6 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
-  imports = [
-    ./software
-
-    ./user.nix
-  ];
-
-  nixpkgs.config.allowUnfree = true;
-
   nix = {
     gc = {
       automatic = true;
@@ -34,4 +26,16 @@
       extra-substituters = [ "https://cache.nixos.org/" ];
     };
   };
+
+  environment.systemPackages = with pkgs; [
+    curl
+    wget
+    nano
+    vim
+    git
+  ];
+
+  time.timeZone = "Asia/Shanghai";
+  i18n.defaultLocale = "en_US.UTF-8";
+  nixpkgs.config.allowUnfree = true;
 }

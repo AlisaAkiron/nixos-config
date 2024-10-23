@@ -1,20 +1,6 @@
 {
   description = "Alisa's Nix/NixOS Flake";
 
-  nixConfig = {
-    experimental-features = [
-      "nix-command"
-      "flakes"
-    ];
-    substituters = [
-      "https://mirrors.cernet.edu.cn/nix-channels/store"
-      "https://cache.nixos.org/"
-    ];
-    extra-substituters = [
-      "https://cache.nixos.org/"
-    ];
-  };
-
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
@@ -27,32 +13,32 @@
   };
 
   outputs =
-    inputs:
-    let
-      sharedModule = import ./shared/module.nix { inherit inputs; };
-    in
+    { nixpkgs, ... }@inputs:
     {
       formatter.x86_64-linux = inputs.nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
+
       nixosConfigurations = {
-        neptune = inputs.nixpkgs.lib.nixosSystem {
+
+        # NixOS (With Desktop) x86_64
+        neptune = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           specialArgs = {
             inherit inputs;
           };
 
-          modules = (sharedModule (import ./hosts/neptune/home.nix)) ++ [
-            ./common
-            ./hosts/neptune
+          modules = [
+            ./hosts/neptune-nixos
           ];
         };
-        galaxy = inputs.nixpkgs.lib.nixosSystem {
+
+        # WSL2 (No Desktop) x86_64
+        galaxy = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           specialArgs = {
             inherit inputs;
           };
-          modules = (sharedModule (import ./hosts/galaxy/home.nix)) ++ [
-            ./common
-            ./hosts/galaxy
+          modules = [
+            ./hosts/galaxy-wsl2
           ];
         };
       };
