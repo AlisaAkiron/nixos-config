@@ -6,6 +6,7 @@
     inputs.home-manager.nixosModules.home-manager
 
     # Core Modules
+    ./core/1password.nix
     ./core/bootloader.nix
     ./core/fonts.nix
     ./core/networkmanager.nix
@@ -26,6 +27,7 @@
     ./home/btop.nix
     ./home/desktop-software.nix
     ./home/git.nix
+    ./home/ssh.nix
     ./home/vscode.nix
     ./home/zsh.nix
   ];
