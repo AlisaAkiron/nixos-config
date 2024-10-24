@@ -22,8 +22,9 @@
   home-manager.users.alisa.imports = [
     ./home/hyprland
 
+    ./home/btop.nix
+    ./home/desktop-software.nix
     ./home/git.nix
     ./home/zsh.nix
-    ./home/desktop-software.nix
   ];
 }
