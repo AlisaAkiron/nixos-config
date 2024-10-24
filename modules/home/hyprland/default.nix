@@ -6,6 +6,7 @@
     ./config.nix
 
     ./waybar
+    ./ags
 
     ./rofi.nix
   ];
