@@ -26,6 +26,7 @@
     ./home/btop.nix
     ./home/desktop-software.nix
     ./home/git.nix
+    ./home/vscode.nix
     ./home/zsh.nix
   ];
 }
