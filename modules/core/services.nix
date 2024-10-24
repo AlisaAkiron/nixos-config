@@ -7,10 +7,10 @@
 
 {
   services = {
-    gnome.gnome-keyring.enable = utils.hasGnome tags;
+    gnome.gnome-keyring.enable = true;
     dbus.enable = true;
 
-    openssh = lib.mkIf (utils.isLinux tags && (!utils.isWSL tags)) {
+    openssh = {
       enable = true;
       ports = [ 22 ];
       settings = {

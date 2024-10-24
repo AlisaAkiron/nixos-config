@@ -5,8 +5,8 @@
 
   services.xserver = {
     enable = true;
-    displayManager.gdm.enable = true;
-    desktopManager.gnome.enable = true;
+    displayManager.gdm.enable = false;
+    desktopManager.gnome.enable = false;
     xkb.layout = "us";
     xkb.variant = "";
     excludePackages = [ pkgs.xterm ];
@@ -37,8 +37,8 @@
     ]
   );
 
-  users.users.gdm.extraGroups = [
-    "gdm"
-    "video"
-  ];
+  # users.users.gdm.extraGroups = [
+  #   "gdm"
+  #   "video"
+  # ];
 }
