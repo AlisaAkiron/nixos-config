@@ -8,7 +8,6 @@
     # Core Modules
     ./core/bootloader.nix
     ./core/fonts.nix
-    ./core/gnome.nix
     ./core/networkmanager.nix
     ./core/pipewire.nix
     ./core/programs.nix
@@ -16,6 +15,8 @@
     ./core/services.nix
     ./core/system.nix
     ./core/user.nix
+    ./core/wayland.nix
+    ./core/xserver.nix
   ];
 
   home-manager.users.alisa.imports = [

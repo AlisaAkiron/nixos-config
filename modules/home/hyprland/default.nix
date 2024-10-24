@@ -2,9 +2,11 @@
 
 {
   imports = [
-    ./waybar
-
     ./hyprland.nix
     ./config.nix
+
+    ./waybar
+
+    ./rofi.nix
   ];
 }
