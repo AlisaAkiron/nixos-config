@@ -9,6 +9,7 @@
     ./core/bootloader.nix
     ./core/fonts.nix
     ./core/networkmanager.nix
+    ./core/nh.nix
     ./core/pipewire.nix
     ./core/programs.nix
     ./core/security.nix
