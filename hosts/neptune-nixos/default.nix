@@ -4,7 +4,8 @@
   imports = [
     ./hardware-configuration.nix
 
-    ../../modules/neptune-nixos.nix
+    ../../core/neptune-nixos-core.nix
+    ../../home/neptune-nixos-home.nix
   ];
 
   networking.hostName = "neptune";

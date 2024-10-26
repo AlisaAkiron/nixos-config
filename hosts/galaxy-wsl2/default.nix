@@ -4,7 +4,8 @@
   imports = [
     inputs.nixos-wsl.nixosModules.default
 
-    ../../modules/galaxy-wsl2.nix
+    ../../core/galaxy-wsl2-core.nix
+    ../../home/galaxy-wsl2-home.nix
   ];
 
   wsl.enable = true;

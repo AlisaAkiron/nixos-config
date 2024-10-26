@@ -1,9 +1,4 @@
-{
-  utils,
-  tags,
-  lib,
-  ...
-}:
+{ ... }:
 
 {
   services = {
