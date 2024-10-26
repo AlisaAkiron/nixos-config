@@ -2,11 +2,6 @@
 
 {
   nix = {
-    gc = {
-      automatic = true;
-      options = "--delete-older-than 7d";
-      dates = "daily";
-    };
     optimise = {
       automatic = true;
       dates = [ "02:20" ];
