@@ -13,7 +13,7 @@
 
     # Extra packages
     home.packages = with pkgs; [
-      rocm-smi
+      rocmPackages.rocm-smi
     ];
 
     # SSH
