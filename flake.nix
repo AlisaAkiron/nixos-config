@@ -22,7 +22,7 @@
   };
 
   outputs =
-    { nix-darwin, nixpkgs, home-manager, ... }@inputs:
+    { nix-darwin, nixpkgs, ... }@inputs:
     {
       nixosConfigurations = {
         # NixOS (With Desktop) x86_64
@@ -53,13 +53,11 @@
         # MacBook Air (M1, 2020) aarch64
         Alisa-MacBook-Air = nix-darwin.lib.darwinSystem {
           system = "aarch64-darwin";
+          specialArgs = {
+            inherit inputs;
+          };
           modules = [
             ./hosts/mba-darwin
-            home-manager.darwinModules.home-manager {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.users.alisa = import ./hosts/mba-darwin/home.nix;
-            }
           ];
         };
       };
