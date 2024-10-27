@@ -4,6 +4,8 @@
   imports = [
     inputs.home-manager.darwinModules.home-manager
     
+    ./darwin
+
     ./common/nix-config.nix
     ./software/packages.nix
   ];
