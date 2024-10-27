@@ -1,6 +1,13 @@
 { inputs, pkgs, ... }:
 
+let
+  sharedModule = import ../../core/mba-darwin.nix { inherit inputs; isDarwin = true; };
+in 
 {
+  imports = [
+    sharedModule
+  ];
+
   nixpkgs.hostPlatform = "aarch64-darwin";
 
   services.nix-daemon.enable = true;
