@@ -10,7 +10,6 @@
     git
     gnupg
     fastfetch
-    tree
     jq
     eza
     fzf

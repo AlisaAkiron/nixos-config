@@ -4,7 +4,14 @@
   programs.zsh = {
     enable = true;
     shellAliases = {
-      ll = "ls -lh";
+      # List files
+      ls = "eza";
+      ll = "ls -l";
+      la = "ls -al";
+      lt = "ls -lT";
+      lt1 = "ls -lT -L=1";
+      lt2 = "ls -lT -L=2";
+      lt3 = "ls -lT -L=3";
     };
     oh-my-zsh = {
       enable = true;
@@ -82,7 +89,7 @@
       function b64d {
         echo -n "$1" | base64 -D && echo ""
       }
-      '';
+    '';
   };
 
   programs.starship = {
