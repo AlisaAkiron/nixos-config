@@ -18,5 +18,7 @@
     kitty
     wayland
     slurp
+    pavucontrol
+    wlogout
   ];
 }

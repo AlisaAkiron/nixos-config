@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ lib, ... }:
 
 let
   betterTransition = "all 0.3s cubic-bezier(.55,-0.68,.48,1.682)";
@@ -22,7 +22,7 @@ in
           "custom/hyprbindings"
           "custom/notification"
           "custom/exit"
-          "battery"
+          "network"
           "tray"
           "clock"
         ];
@@ -46,7 +46,7 @@ in
           max-length = 22;
           separate-outputs = false;
           rewrite = {
-            "" = " 🙈 No Windows? ";
+            "" = "Desktop";
           };
         };
         "memory" = {
@@ -143,29 +143,6 @@ in
           exec = "swaync-client -swb";
           on-click = "sleep 0.1 && task-waybar";
           escape = true;
-        };
-        "battery" = {
-          states = {
-            warning = 30;
-            critical = 15;
-          };
-          format = "{icon} {capacity}%";
-          format-charging = "󰂄 {capacity}%";
-          format-plugged = "󱘖 {capacity}%";
-          format-icons = [
-            "󰁺"
-            "󰁻"
-            "󰁼"
-            "󰁽"
-            "󰁾"
-            "󰁿"
-            "󰂀"
-            "󰂁"
-            "󰂂"
-            "󰁹"
-          ];
-          on-click = "";
-          tooltip = false;
         };
       }
     ];

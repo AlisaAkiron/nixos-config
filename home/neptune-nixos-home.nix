@@ -1,4 +1,8 @@
-{ inputs, pkgs, ... }:
+{
+  inputs,
+  pkgs,
+  ...
+}:
 
 {
   imports = [
@@ -32,6 +36,14 @@
         "HDMI-A-1, 2560x1440@120, 2560x0, 1, vrr, 1"
         "DP-1, 3840x2160@160, 0x0, 1.5, vrr, 1"
         ", preferred, auto, 1"
+      ];
+    };
+
+    # Hyprpaper Wallpapers
+    services.hyprpaper.settings = {
+      wallpaper = [
+        "HDMI-A-1, /home/alisa/Pictures/wallpapaer/aqua-1.jpg"
+        "DP-1, /home/alisa/Pictures/wallpapaer/aqua-2.jpg"
       ];
     };
   };

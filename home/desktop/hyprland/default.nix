@@ -7,6 +7,7 @@
 
     ./waybar
 
+    ./hyprpaper.nix
     ./rofi.nix
   ];
 }

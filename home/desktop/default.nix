@@ -3,6 +3,7 @@
 {
   imports = [
     ./hyprland
+    ./xdg.nix
 
     ./desktop-software.nix
 
