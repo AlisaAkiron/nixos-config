@@ -76,6 +76,7 @@
       "ALT, Space, exec, rofi -show drun || pkill rofi"
       "$mainMod, T, exec, kitty"
       "$mainMod, Q, killactive"
+      "$mainMod, 4, exec, grimblast copy area"
     ];
   };
 }

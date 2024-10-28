@@ -18,6 +18,8 @@
     kitty
     wayland
     slurp
+    grimblast
+    wl-clipboard
     pavucontrol
     wlogout
   ];
