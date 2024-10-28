@@ -4,6 +4,7 @@
   imports = [
     ./hyprland
     ./xdg.nix
+    ./gtk.nix
 
     ./desktop-software.nix
 

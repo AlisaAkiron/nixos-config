@@ -28,7 +28,7 @@
       '';
     };
 
-    # Hyprland Monitors
+    # Hyprland Configurations
     wayland.windowManager.hyprland.settings = {
       monitor = [
         # HDMI-A-1 (Mi Monitor, 2K@144, right)
@@ -36,6 +36,10 @@
         "HDMI-A-1, 2560x1440@120, 2560x0, 1, vrr, 1"
         "DP-1, 3840x2160@160, 0x0, 1.5, vrr, 1"
         ", preferred, auto, 1"
+      ];
+      workspace = [
+        "1, monitor:DP-1, default:true"
+        "2, monitor:HDMI-A-1, default: true"
       ];
     };
 
