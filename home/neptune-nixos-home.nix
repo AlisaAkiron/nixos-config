@@ -22,6 +22,7 @@
       ./wayland
 
       # Softwares
+      ./desktop/programs/1password.nix
       ./desktop/programs/software.nix
     ];
 

@@ -2,7 +2,6 @@
 
 {
   imports = [
-    ./1password.nix
     ./dolphin.nix
     ./fonts.nix
     ./ime.nix
