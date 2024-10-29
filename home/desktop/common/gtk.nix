@@ -1,5 +1,9 @@
-{ lib, pkgs, ... }:
-
+{
+  lib,
+  pkgs,
+  config,
+  ...
+}:
 {
   home.pointerCursor = {
     package = pkgs.bibata-cursors;
@@ -14,9 +18,10 @@
 
     font = {
       name = "Noto Sans CJK SC";
-      package = pkgs.noto-fonts-cjk-sans;
       size = 9;
     };
+
+    gtk2.configLocation = "${config.xdg.configHome}/gtk-2.0/gtkrc";
 
     iconTheme = {
       name = "Adwaita";

@@ -3,7 +3,7 @@
 {
   home.packages = with pkgs; [
     microsoft-edge
-    atlauncher
+    clash-verge-rev
     qq
   ];
 }

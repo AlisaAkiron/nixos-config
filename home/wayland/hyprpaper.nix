@@ -7,7 +7,7 @@
 
   home.file."${config.xdg.userDirs.pictures}/wallpapaer" = {
     enable = true;
-    source = ../../../images/wallpapers;
+    source = ../../images/wallpapers;
     recursive = true;
   };
 

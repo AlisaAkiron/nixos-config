@@ -11,8 +11,18 @@
 
   home-manager.users.alisa = {
     imports = [
-      ./common
-      ./desktop
+      # Editors
+      ./editors/vscode
+
+      # Terminal
+      ./terminal/profile-desktop.nix
+
+      # Desktop
+      ./desktop/common
+      ./wayland
+    
+      # Softwares
+      ./desktop/programs/software.nix
     ];
 
     # Extra packages
