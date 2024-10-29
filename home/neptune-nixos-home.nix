@@ -20,7 +20,7 @@
       # Desktop
       ./desktop/common
       ./wayland
-    
+
       # Softwares
       ./desktop/programs/software.nix
     ];
@@ -36,6 +36,13 @@
         Host *
           IdentityAgent ~/.1password/agent.sock
       '';
+    };
+
+    # Git
+    programs.git.extraConfig = {
+      http = {
+        proxy = "http://127.0.0.1:7890";
+      };
     };
 
     # Hyprland Configurations

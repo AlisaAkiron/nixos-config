@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nur.url = "github:nix-community/NUR";
 
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
 
@@ -20,7 +21,12 @@
   };
 
   outputs =
-    { nix-darwin, nixpkgs, ... }@inputs:
+    {
+      nix-darwin,
+      nixpkgs,
+      nur,
+      ...
+    }@inputs:
     {
       nixosConfigurations = {
         # NixOS (With Desktop) x86_64
@@ -31,6 +37,7 @@
           };
 
           modules = [
+            nur.nixosModules.nur
             ./hosts/neptune-nixos
           ];
         };

@@ -5,6 +5,8 @@
     exec-once = [
       "waybar"
       "hyprpaper"
+      "fcitx5 -d -r"
+      "fcitx5-remote -r"
     ];
 
     input = {
@@ -65,6 +67,10 @@
       animate_mouse_windowdragging = false;
       vrr = 1;
     };
+
+    windowrulev2 = [
+      "pseudo, class:(fcitx)"
+    ];
 
     "$mainMod" = "SUPER";
 

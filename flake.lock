@@ -390,6 +390,21 @@
         "type": "github"
       }
     },
+    "nur": {
+      "locked": {
+        "lastModified": 1730202677,
+        "narHash": "sha256-seCp8vsgY212s9EaBkTN7zJg9NMiPvHLBvK13fPqLRA=",
+        "owner": "nix-community",
+        "repo": "NUR",
+        "rev": "aff6965a8bc9d16a758a45313427b3b5198e3550",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "NUR",
+        "type": "github"
+      }
+    },
     "pre-commit-hooks": {
       "inputs": {
         "flake-compat": "flake-compat",
@@ -420,7 +435,8 @@
         "hyprland": "hyprland",
         "nix-darwin": "nix-darwin",
         "nixos-wsl": "nixos-wsl",
-        "nixpkgs": "nixpkgs_3"
+        "nixpkgs": "nixpkgs_3",
+        "nur": "nur"
       }
     },
     "systems": {
