@@ -4,6 +4,12 @@
   config,
   ...
 }:
+
+let
+  darkModeConfig = {
+    gtk-application-prefer-dark-theme = 1;
+  };
+in
 {
   home.pointerCursor = {
     package = pkgs.bibata-cursors;
@@ -32,7 +38,18 @@
       name = "adw-gtk3-dark";
       package = pkgs.adw-gtk3;
     };
+
+    gtk3.extraConfig = darkModeConfig;
+    gtk4.extraConfig = darkModeConfig;
   };
 
   xdg.configFile."gtk-4.0/gtk.css".enable = lib.mkForce false;
+
+  home.sessionVariables.GTK_THEME = config.gtk.theme.name;
+
+  dconf.settings = {
+    "org/gnome/desktop/interface" = {
+      color-scheme = "prefer-dark";
+    };
+  };
 }
