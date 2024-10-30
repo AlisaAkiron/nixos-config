@@ -8,6 +8,10 @@
     "gitlab.duoChat.enabled" = false;
     "redhat.telemetry.enabled" = false;
 
+    # Auto Update
+    "update.mode" = "none";
+    "extensions.autoUpdate" = false;
+
     # Workbench
     "workbench.colorTheme" = "Eva Dark Italic";
     "workbench.preferredLightColorTheme" = "Eva Light Italic";
