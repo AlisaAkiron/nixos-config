@@ -39,13 +39,6 @@
       '';
     };
 
-    # Git
-    programs.git.extraConfig = {
-      http = {
-        proxy = "http://127.0.0.1:7890";
-      };
-    };
-
     # Hyprland Configurations
     wayland.windowManager.hyprland.settings = {
       monitor = [
