@@ -13,6 +13,10 @@
     imports = [
       # Editors
       ./editors/vscode
+      ./editors/jetbrains
+
+      # Developer
+      ./developer/dotnet
 
       # Terminal
       ./terminal/profile-desktop.nix
