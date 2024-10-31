@@ -10,6 +10,8 @@
     ./software/packages.nix
   ];
 
+  nixpkgs.config.allowUnfree = true;
+
   programs.zsh.enable = true;
 
   environment.etc."zprofile".text = ''
