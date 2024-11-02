@@ -7,6 +7,8 @@
 
   home-manager.users.alisa = {
     imports = [
+      # Dev Env
+      ./devenv
 
       # Terminal
       ./terminal/profile-tty.nix
@@ -21,7 +23,7 @@
         export PATH="$HOME/.jenv/bin:$PATH"
         eval "$(jenv init -)"
 
-        # Add .NET Core SDK tools
+        # Add .NET Core SDK tools 
         export PATH="$PATH:/Users/alisa/.dotnet/tools"
 
         # NodeJS Version Manager
@@ -41,12 +43,6 @@
 
         # Add 1Password SSH Agent
         export SSH_AUTH_SOCK="/Users/alisa/.1password/agent.sock"
-
-        # PostgreSQL
-        export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
-
-        # Go
-        export PATH="/Users/alisa/go/bin:$PATH"
       '';
       shellAliases = {
         cdp = "cd ~/Developer/Program";
