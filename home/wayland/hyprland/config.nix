@@ -82,7 +82,26 @@
       "ALT, Space, exec, rofi -show drun || pkill rofi"
       "$mainMod, T, exec, kitty"
       "$mainMod, Q, killactive"
-      "$mainMod, 4, exec, grimblast copy area"
+      "ALT, 4, exec, grimblast copy area"
+
+      # Swap windows
+      "$mainMod ALT, left, swapwindow, l"
+      "$mainMod ALT, right, swapwindow, r"
+      "$mainMod ALT, up,swapwindow, u"
+      "$mainMod ALT, down, swapwindow, d"
+
+      # Move focus
+      "$mainMod SHIFT, left, movefocus, l"
+      "$mainMod SHIFT, right, movefocus, r"
+      "$mainMod SHIFT, up, movefocus, u"
+      "$mainMod SHIFT, down, movefocus, d"
+
+      # Navigate workspaces
+      "$mainMod, left, workspace, -1"
+      "$mainMod, right, workspace, +1"
+      "$mainMod, mouse_down, workspace, -1"
+      "$mainMod, mouse_up, workspace, +1"
+      "$mainMod SHIFT, C, togglespecialworkspace"
     ];
   };
 }
