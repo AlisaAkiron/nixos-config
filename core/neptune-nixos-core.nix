@@ -6,6 +6,8 @@
     ./desktop
     ./nixos
     ./software
+
+    ./desktop/special/proxy.nix
   ];
 
   environment.sessionVariables = {
