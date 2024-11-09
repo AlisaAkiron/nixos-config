@@ -12,6 +12,9 @@
 
       # Terminal
       ./terminal/profile-tty.nix
+      
+      ./terminal/ssh/1password.nix
+      ./terminal/ssh/public-server.nix
     ];
 
     programs.zsh = {
