@@ -7,9 +7,6 @@
 
   home-manager.users.alisa = {
     imports = [
-      # Developer
-      ./developer/dotnet
-
       # Dev Env
       ./devenv
 
@@ -18,6 +15,12 @@
       
       ./terminal/ssh/1password.nix
       ./terminal/ssh/public-server.nix
+    ];
+
+    home.sessionPath = [
+      "/usr/local/share/dotnet" # .NET SDK (local install)
+      "/Users/alisa/.dotnet/tools" # .NET Tools
+      "/Users/alisa/Library/Application Support/JetBrains/Toolbox/scripts" # JetBrains Toolbox
     ];
 
     programs.zsh = {
@@ -29,26 +32,14 @@
         export PATH="$HOME/.jenv/bin:$PATH"
         eval "$(jenv init -)"
 
-        # Add .NET Core SDK tools 
-        export PATH="$PATH:/Users/alisa/.dotnet/tools"
-
         # NodeJS Version Manager
         export NVM_DIR="$HOME/.nvm"
         [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"                                       # This loads nvm
         [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
 
-        # Python packages
-        export PATH="$PATH:/Users/alisa/Library/Python/3.11/bin"
-
         # PNPM
         export PNPM_HOME="/Users/alisa/Library/pnpm"
         export PATH="$PNPM_HOME:$PATH"
-
-        # Added by Toolbox App
-        export PATH="$PATH:/Users/alisa/Library/Application Support/JetBrains/Toolbox/scripts"
-
-        # Add 1Password SSH Agent
-        export SSH_AUTH_SOCK="/Users/alisa/.1password/agent.sock"
       '';
       shellAliases = {
         cdp = "cd ~/Developer/Program";
