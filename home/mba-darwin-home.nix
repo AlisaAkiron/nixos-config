@@ -7,6 +7,9 @@
 
   home-manager.users.alisa = {
     imports = [
+      # Developer
+      ./developer/dotnet
+
       # Dev Env
       ./devenv
 
