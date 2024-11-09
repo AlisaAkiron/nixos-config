@@ -2,11 +2,13 @@
 
 {
   imports = [
+    ./bat.nix
     ./btop.nix
     ./eza.nix
     ./git.nix
-    ./zoxide.nix
+    ./ripgrep.nix
     ./ssh.nix
+    ./zoxide.nix
 
     ./cli.nix
   ];
