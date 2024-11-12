@@ -1,9 +1,10 @@
 { pkgs, ... }:
 
 {
-  programs.git-credential-oauth = {
-    enable = true;
-  };
+  home.packages = with pkgs; [
+    gitFull
+    git-credential-manager
+  ];
 
   programs.git = {
     enable = true;
@@ -18,13 +19,13 @@
         defaultBranch = "main";
       };
       credential = {
+        helper = "manager";
         "https://git.alisaqaq.moe" = {
-          oauthClientId = "30bc96d0d822cbd8ba7e97cb9a39e748b68be3cd8d80b7c3c0733c2fd0489cfa";
-          oauthScopes = "read_repository write_repository";
-          oauthAuthURL = "/oauth/authorize";
-          oauthTokenURL = "/oauth/token";
-          oauthDeviceAuthURL = "/oauth/authorize_device";
+          provider = "gitlab";
+          gitlabDevClientId = "e69becbbc576cc44c376078f5a5c0e3d8bc3bcc108ef1c63e8f8904facfed786";
+          gitlabDevClientSecret = "gloas-1bf10b41754d4f719bc9088a39f68a2676c0c8e72ded3f3275f2bfb0d8dad446";
         };
+        credentialStore = "cache";
       };
     };
     signing = {
