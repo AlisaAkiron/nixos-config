@@ -7,7 +7,8 @@
 
   home-manager.users.alisa = {
     imports = [
-      ./common
+      # Terminal
+      ./terminal/profile-tty.nix
     ];
   };
 }
