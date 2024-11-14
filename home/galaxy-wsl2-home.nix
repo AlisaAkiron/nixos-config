@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ inputs, pkgs, ... }:
 
 {
   imports = [
@@ -9,6 +9,10 @@
     imports = [
       # Terminal
       ./terminal/profile-tty.nix
+    ];
+
+    home.packages = [
+      (import ../packages/dfx { inherit pkgs; })
     ];
   };
 }
