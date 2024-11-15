@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ inputs, pkgs, ... }:
 
 {
   imports = [
@@ -15,6 +15,10 @@
       
       ./terminal/ssh/1password.nix
       ./terminal/ssh/public-server.nix
+    ];
+
+    home.packages = [
+      (import ../packages/dfx { inherit pkgs; })
     ];
 
     home.sessionPath = [
