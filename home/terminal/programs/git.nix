@@ -1,8 +1,8 @@
-{ pkgs, lib, ... }:
+{ pkgs, ... }:
 
-let 
+let
   gitCredentialStore = if pkgs.stdenvNoCC.isDarwin then "keychain" else "cache";
-inda
+in
 {
   home.packages = with pkgs; [
     gitFull

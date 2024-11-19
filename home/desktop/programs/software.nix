@@ -11,7 +11,7 @@
 
     # Utils
     sonobus # Audio Stream in LAN
-    mission-center # System Monitor
+    # mission-center # System Monitor (unable to build)
     loupe # Image Viewer
     vlc # Media Player
 
