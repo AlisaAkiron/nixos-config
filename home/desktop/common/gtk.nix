@@ -1,4 +1,9 @@
-{ pkgs, ... }:
+{
+  lib,
+  pkgs,
+  config,
+  ...
+}:
 
 {
   home.pointerCursor = {
@@ -17,11 +22,7 @@
       size = 9;
     };
 
-    cursorTheme = {
-      name = "Bibata-Modern-Classic";
-      package = pkgs.bibata-cursors;
-      size = 16;
-    };
+    gtk2.configLocation = "${config.xdg.configHome}/gtk-2.0/gtkrc";
 
     iconTheme = {
       name = "Adwaita";
@@ -33,4 +34,6 @@
       package = pkgs.adw-gtk3;
     };
   };
+
+  xdg.configFile."gtk-4.0/gtk.css".enable = lib.mkForce false;
 }

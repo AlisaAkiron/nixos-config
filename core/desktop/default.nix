@@ -7,7 +7,7 @@
     ./gnome-keyring.nix
     ./gsettings.nix
     ./ime.nix
-    ./sddm.nix
+    ./greetd.nix
     ./wayland.nix
     ./xserver.nix
   ];

@@ -55,10 +55,6 @@
         "DP-1, 3840x2160@160, 0x0, 1.5, vrr, 1"
         ", preferred, auto, 1"
       ];
-      workspace = [
-        "1, monitor:DP-1, default:true"
-        "2, monitor:HDMI-A-1, default: true"
-      ];
     };
 
     # Hyprpaper Wallpapers

@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -11,5 +11,9 @@
     ./zoxide.nix
 
     ./cli.nix
+  ];
+
+  home.packages = with pkgs; [
+    gnumake
   ];
 }

@@ -1,0 +1,50 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "CaskaydiaMono Nerd Font", "Noto Sans CJK SC", sans-serif;
+    font-size: 15px;
+    box-shadow: none;
+    text-shadow: none;
+    transition-duration: 0s;
+}
+
+window {
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+#workspaces {
+    margin: 0 5px;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    color: rgba(217, 216, 216, 0.4);
+}
+
+#workspaces button.visible {
+    color: rgba(217, 216, 216, 1);
+}
+
+#workspaces button.focused {
+    border-top: 3px solid rgba(217, 216, 216, 1);
+    border-bottom: 3px solid rgba(217, 216, 216, 0);
+}
+
+#workspaces button.urgent {
+    color: rgba(238, 46, 36, 1);
+}
+
+#custom-logo,
+#tray,
+#memory,
+#network,
+#wireplumber {
+    margin: 0px 6px 0px 10px;
+    min-width: 25px;
+}
+
+#clock {
+    margin: 0px 6px 0px 10px;
+    min-width: 140px;
+}

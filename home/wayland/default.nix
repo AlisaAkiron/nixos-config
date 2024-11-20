@@ -2,11 +2,11 @@
 
 {
   imports = [
+    ./anyrun
     ./hyprland
     ./waybar
 
     ./hyprpaper.nix
-    ./rofi.nix
     ./wlogout.nix
   ];
 
