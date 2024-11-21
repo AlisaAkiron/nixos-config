@@ -12,6 +12,10 @@
       lt1 = "ls -lT -L=1";
       lt2 = "ls -lT -L=2";
       lt3 = "ls -lT -L=3";
+      # bat
+      cat = "bat";
+      catl = "bat --paging=never -l log";
+      fzfp = ''fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"'';
     };
     oh-my-zsh = {
       enable = true;
@@ -28,6 +32,25 @@
         DISABLE_UNTRACKED_FILES_DIRTY="true"
       '';
     };
+    initExtra = ''
+      # zsh parameter completion for the dotnet CLI
+      _dotnet_zsh_complete()
+      {
+        local completions=("$(dotnet complete "$words")")
+
+        # If the completion list is empty, just continue with filename selection
+        if [ -z "$completions" ]
+        then
+          _arguments '*::arguments: _normal'
+          return
+        fi
+
+        # This is not a variable assignment, don't remove spaces!
+        _values = "''${(ps:\n:)completions}"
+      }
+
+      compdef _dotnet_zsh_complete dotnet
+    '';
     envExtra = ''
       # Custom Functions
       function rand {
