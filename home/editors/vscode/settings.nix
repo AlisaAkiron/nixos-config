@@ -7,6 +7,7 @@
     "window.restoreWindows" = "none";
     "gitlab.duoChat.enabled" = false;
     "redhat.telemetry.enabled" = false;
+    "makefile.configureOnOpen" = false;
 
     # Auto Update
     "update.mode" = "none";
@@ -24,7 +25,6 @@
     "editor.formatOnSave" = true;
     "editor.formatOnType" = true;
     "editor.fontSize" = 20;
-    "editor.inlineSuggest.enable" = true;
     "editor.linkedEditing" = true;
     "editor.unicodeHighlight.allowedLocales" = {
       "zh-hant" = true;
