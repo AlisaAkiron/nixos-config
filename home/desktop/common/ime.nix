@@ -38,10 +38,10 @@
     UseInputMethodLanguageToDisplayText=True
 
     # 主题
-    Theme=catppuccin-latte-pink
+    Theme=FluentLight-solid
 
     # 深色主题
-    DarkTheme=catppuccin-mocha-pink
+    DarkTheme=FluentDark-solid
 
     # 跟随系统浅色/深色设置
     UseDarkTheme=True
