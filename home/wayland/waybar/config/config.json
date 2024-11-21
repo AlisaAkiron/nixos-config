@@ -1,16 +1,25 @@
 [
   {
-    "clock": {
-      "format": " {:%I:%M %p}",
-      "format-alt": " {:%a, %d %b %Y}",
-      "tooltip": true,
-      "tooltip-format": "{calendar}"
-    },
+    "layer": "top",
+    "position": "top",
+    "modules-left": [
+      "custom/logo",
+      "hyprland/workspaces"
+    ],
+    "modules-center": [
+      "clock"
+    ],
+    "modules-right": [
+      "tray",
+      "custom/color-scheme",
+      "memory",
+      "network",
+      "pulseaudio"
+    ],
     "custom/logo": {
       "format": "  ",
       "tooltip": false
     },
-    "height": 30,
     "hyprland/workspaces": {
       "format": "{icon}",
       "format-icons": {
@@ -22,40 +31,48 @@
         "6": "6",
         "7": "7",
         "8": "8",
-        "9": "9",
-        "active": "󱓻",
-        "default": "",
-        "urgent": "󱓻"
+        "9": "9"
       },
       "on-scroll-down": "hyprctl dispatch workspace e-1",
       "on-scroll-up": "hyprctl dispatch workspace e+1",
-      "persistent_workspaces": {
-        "1": [],
-        "2": [],
-        "3": [],
-        "4": [],
-        "5": []
+      "persistent-workspaces": {
+        "*": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
       }
     },
-    "layer": "top",
+    "clock": {
+      "format": "{:L%H:%M}",
+      "tooltip": true,
+      "tooltip-format": ""
+    },
+    "tray": {
+      "spacing": 12
+    },
+    "custom/color-scheme": {
+      "format": "{icon}",
+      "format-icons": {
+        "'prefer-dark'": "  ",
+        "'prefer-light'": "  "
+      },
+      "interval": 1,
+      "return-type": "json",
+      "exec": "${HOME}/.config/scripts/read-color-scheme.sh",
+      "on-click": "${HOME}/.config/scripts/toggle-color-scheme.sh"
+    },
     "memory": {
       "format": " {}%",
       "interval": 5,
       "max-length": 10
     },
-    "modules-center": [
-      "clock"
-    ],
-    "modules-left": [
-      "custom/logo",
-      "hyprland/workspaces"
-    ],
-    "modules-right": [
-      "tray",
-      "memory",
-      "network",
-      "wireplumber"
-    ],
     "network": {
       "format-alt": "󱛇",
       "format-disconnected": "󰖪",
@@ -72,22 +89,20 @@
       "nospacing": 1,
       "tooltip": false
     },
-    "position": "top",
-    "tray": {
-      "spacing": 12
-    },
-    "wireplumber": {
-      "format": "{icon}",
-      "format-bluetooth": "",
+    "pulseaudio": {
+      "format": "{icon} {volume}%",
+      "format-bluetooth": "{icon} 󰂰 {volume}%",
+      "format-muted": "󰖁",
       "format-icons": {
-        "default": [],
-        "headphone": ""
+        "headphone": "",
+        "default": [
+          "",
+          "",
+          "󰕾",
+          ""
+        ]
       },
-      "format-muted": "",
-      "nospacing": 1,
-      "on-click": "pamixer -t",
-      "scroll-step": 1,
-      "tooltip-format": "Volume: {volume}%"
+      "on-click": "pavucontrol"
     }
   }
 ]

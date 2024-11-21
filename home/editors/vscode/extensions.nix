@@ -7,8 +7,8 @@
       # Theme
       pkief.material-icon-theme
 
-      # Nix
-      jnoortheen.nix-ide
+      # Language Server support
+      jnoortheen.nix-ide # Nixs
 
       # Editor
       editorconfig.editorconfig
@@ -44,5 +44,4 @@
         sha256 = "dad92e3bc0c3debc633efd209baf1c05104d975432c6ed432e24e6513eeb3d53";
       }
     ];
-
 }

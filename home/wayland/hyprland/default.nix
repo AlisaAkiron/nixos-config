@@ -34,6 +34,7 @@
   systemd.user.targets.hyprland-session.Unit.Wants = [ "xdg-desktop-autostart.target" ];
 
   home.packages = with pkgs; [
+    hyprls
     xdg-desktop-portal-hyprland
     xdg-desktop-portal-gtk
     kitty

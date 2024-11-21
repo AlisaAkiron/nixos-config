@@ -10,10 +10,12 @@ build-proxy-router:
 debug-waybar:
 	rm ${HOME}/.config/waybar/config
 	rm ${HOME}/.config/waybar/style.css
-	ln -s ${PWD}/home/wayland/waybar/raw/config ${HOME}/.config/waybar/config
-	ln -s ${PWD}/home/wayland/waybar/raw/style.css ${HOME}/.config/waybar/style.css
+	ln -s ${PWD}/home/wayland/waybar/config/config.json ${HOME}/.config/waybar/config
+	ln -s ${PWD}/home/wayland/waybar/config/style.css ${HOME}/.config/waybar/style.css
+	touch ${PWD}/debug-waybar
 
 debug-waybar-restore:
 	rm ${HOME}/.config/waybar/config
 	rm ${HOME}/.config/waybar/style.css
-
+	rm ${PWD}/debug-waybar
+	
