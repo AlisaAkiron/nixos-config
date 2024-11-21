@@ -18,4 +18,13 @@ debug-waybar-restore:
 	rm ${HOME}/.config/waybar/config
 	rm ${HOME}/.config/waybar/style.css
 	rm ${PWD}/debug-waybar
-	
+
+update:
+	nix flake update
+
+update-proxy-local:
+	HTTP_PROXY=http://127.0.0.1:7890 HTTPS_PROXY=http://127.0.0.1:7890 nix flake update
+
+update-proxy-router:
+	HTTP_PROXY=http://10.233.0.1:7890 HTTPS_PROXY=http://10.233.0.1:7890 nix flake update
+
