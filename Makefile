@@ -1,6 +1,12 @@
 build:
 	nh os switch
 
+build-darwin:
+	darwin-rebuild switch --flake ~/.nixos-config
+
+build-darwin-proxy-local:
+	HTTP_PROXY=http://127.0.0.1:7890 HTTPS_PROXY=http://127.0.0.1:7890 darwin-rebuild switch --flake ~/.nixos-config
+
 build-proxy-local:
 	sudo HTTP_PROXY=http://127.0.0.1:7890 HTTPS_PROXY=http://127.0.0.1:7890 nh os switch -R
 
