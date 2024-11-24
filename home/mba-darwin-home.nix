@@ -12,9 +12,12 @@
 
       # Terminal
       ./terminal/profile-tty.nix
-      
+
       ./terminal/ssh/1password.nix
       ./terminal/ssh/public-server.nix
+
+      # Editor
+      ./editors/neovim
     ];
 
     home.packages = [
