@@ -16,6 +16,9 @@
       cat = "bat";
       catl = "bat --paging=never -l log";
       fzfp = ''fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"'';
+      # proxy
+      useproxy = "export http_proxy=http://127.0.0.1:7890 https_proxy=http://127.0.0.1:7890";
+      useproxy-router = "export http_proxy=http://10.233.0.1:7890 https_proxy=http://10.233.0.1:7890";
     };
     oh-my-zsh = {
       enable = true;
@@ -50,12 +53,15 @@
       }
 
       compdef _dotnet_zsh_complete dotnet
+
+      # fnm
+      eval "$(fnm env --use-on-cd --shell zsh)"
     '';
     envExtra = ''
       # Custom Functions
       function rand {
         length=32
-        
+
         if [ "$1" != "" ]
         then
           length=$1
@@ -66,7 +72,7 @@
 
       function randb64 {
         length=32
-          
+
         if [ "$1" != "" ]
         then
           length=$1
@@ -74,14 +80,14 @@
 
         ori=$(head -c 512 /dev/urandom | LC_CTYPE=C tr -cd 'a-zA-Z0-9' | head -c $length)
         b64=$(echo -n "$ori" | base64)
-          
+
         echo $ori
         echo $b64
       }
 
       function rands {
         length=32
-          
+
         if [ "$1" != "" ]
         then
           length=$1
@@ -92,7 +98,7 @@
 
       function randb64s {
         length=32
-          
+
         if [ "$1" != "" ]
         then
           length=$1
@@ -100,7 +106,7 @@
 
         ori=$(head -c 512 /dev/urandom | LC_CTYPE=C tr -cd 'a-zA-Z0-9!@;:.-+=*' | head -c $length)
         b64=$(echo -n "$ori" | base64)
-          
+
         echo $ori
         echo $b64
       }

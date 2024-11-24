@@ -7,6 +7,9 @@
 
   home-manager.users.alisa = {
     imports = [
+      # Developer
+      ./developer/common.nix
+
       # Dev Env
       ./devenv
 
@@ -34,19 +37,6 @@
       initExtra = ''
         # Homebrew
         eval "$(/opt/homebrew/bin/brew shellenv)"
-
-        # JENV
-        export PATH="$HOME/.jenv/bin:$PATH"
-        eval "$(jenv init -)"
-
-        # NodeJS Version Manager
-        export NVM_DIR="$HOME/.nvm"
-        [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"                                       # This loads nvm
-        [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
-
-        # PNPM
-        export PNPM_HOME="/Users/alisa/Library/pnpm"
-        export PATH="$PNPM_HOME:$PATH"
       '';
       shellAliases = {
         cdp = "cd ~/Developer/Program";

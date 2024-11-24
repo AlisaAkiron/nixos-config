@@ -16,6 +16,7 @@
       ./editors/jetbrains
 
       # Developer
+      ./developer/common.nix
       ./developer/dotnet
 
       # Terminal
