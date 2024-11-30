@@ -9,12 +9,11 @@
     cascadia-code
     maple-mono-SC-NF
     coursier
-    (nerdfonts.override {
-      fonts = [
-        "FiraCode"
-        "CascadiaCode"
-      ];
-    })
+    inter
+    nerd-fonts.fira-code
+    nerd-fonts.caskaydia-cove
+    nerd-fonts.caskaydia-mono
+    nerd-fonts.geist-mono
   ];
 }
 
