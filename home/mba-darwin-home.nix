@@ -14,7 +14,8 @@
       ./devenv
 
       # Terminal
-      ./terminal/profile-tty.nix
+      ./terminal/profile-desktop.nix
+      ./terminal/emulator/wezterm.nix
 
       ./terminal/ssh/1password.nix
       ./terminal/ssh/public-server.nix

@@ -40,6 +40,9 @@
 
       # Creative
       "sigil"
+
+      # Terminal
+      "wezterm"
     ];
   };
 }
