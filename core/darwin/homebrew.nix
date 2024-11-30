@@ -23,6 +23,10 @@
       "font-cascadia-mono"
       "font-caskaydia-cove-nerd-font"
       "font-fira-code"
+      "font-intel-one-mono"
+      "font-maple-mono-nf"
+      "font-geist-mono-nerd-font"
+      "font-inter"
 
       # Apps
       "appcleaner"
