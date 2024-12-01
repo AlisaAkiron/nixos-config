@@ -1,9 +1,9 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, inputs, ... }:
 
 let
   isNotDarwin = !pkgs.stdenvNoCC.isDarwin;
   weztermPackage = if isNotDarwin
-    then pkgs.wezterm
+    then inputs.wezterm.packages.${pkgs.system}.default
     else (import ../../../packages/placeholder { inherit pkgs; });
   cfg = config.programs.wezterm.customExtraOptions;
 in

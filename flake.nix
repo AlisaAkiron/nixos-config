@@ -22,6 +22,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    wezterm.url = "github:wez/wezterm?dir=nix";
+
     # hyprwm
     hyprland.url = "github:hyprwm/Hyprland";
 
