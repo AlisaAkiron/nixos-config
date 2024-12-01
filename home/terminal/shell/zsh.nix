@@ -119,5 +119,11 @@
         echo -n "$1" | base64 -D && echo ""
       }
     '';
+    autosuggestion = {
+      enable = true;
+    };
+    syntaxHighlighting = {
+      enable = true;
+    };
   };
 }
