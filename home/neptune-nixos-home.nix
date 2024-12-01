@@ -39,6 +39,14 @@
       moonlight-qt
     ];
 
+    # Wezterm
+    programs.wezterm.customExtraOptions = {
+      font_size = "16";
+      window_decorations = "RESIZE";
+      initial_rows = "40";
+      initial_cols = "160";
+    };
+
     # SSH
     programs.ssh = {
       extraConfig = ''

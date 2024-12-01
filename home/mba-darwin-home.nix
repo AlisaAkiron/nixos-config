@@ -15,7 +15,6 @@
 
       # Terminal
       ./terminal/profile-desktop.nix
-      ./terminal/emulator/wezterm.nix
 
       ./terminal/ssh/1password.nix
       ./terminal/ssh/public-server.nix
@@ -45,6 +44,13 @@
         cdw = "cd ~/Developer/Work";
         quarantine-permit = "sudo xattr -r -d com.apple.quarantine";
       };
+    };
+
+    programs.wezterm.customExtraOptions = {
+      font_size = "16";
+      window_decorations = "TITLE | RESIZE";
+      initial_rows = "40";
+      initial_cols = "160";
     };
   };
 }
