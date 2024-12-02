@@ -9,6 +9,7 @@
     ./git.nix
     ./ripgrep.nix
     ./ssh.nix
+    ./yazi.nix
     ./zoxide.nix
   ];
 
@@ -22,6 +23,13 @@
     # utils
     gnumake
     fd
+    file
+
+    # multimedia
+    ffmpeg
+    ffmpegthumbnailer
+    imagemagick
+    poppler # PDF
 
     # security
     yubikey-manager
