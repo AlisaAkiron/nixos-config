@@ -46,7 +46,7 @@ in
       "$mod SHIFT, E, exec, pkill Hyprland"
       "$mod, Q, killactive,"
       "$mod, F, fullscreen,"
-      "$mod, T, exec, wezterm"
+      "$mod, T, exec, kitty"
 
       # launchers
       "ALT, SPACE, exec, ${toggle "anyrun"}"
