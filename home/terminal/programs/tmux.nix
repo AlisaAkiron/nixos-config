@@ -1,6 +1,19 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
+let
+  isDarwin = pkgs.stdenvNoCC.isDarwin;
+  darwinExtraConfig = ''
+    # Fix for tmux on MacOS
+    set-option -g default-command "reattach-to-user-namespace -l zsh"
+    set-environment -g SSH_AUTH_SOCK $SSH_AUTH_SOCK
+  '';
+in
 {
+  # Fix on MacOS
+  home.packages = lib.mkIf isDarwin [
+    pkgs.reattach-to-user-namespace
+  ];
+
   programs.tmux = {
     enable = true;
     package = pkgs.tmux;
@@ -8,10 +21,14 @@
 
     clock24 = true;
     keyMode = "vi";
-    prefix = "C-Space";
+    prefix = if isDarwin then "M-I" else "C-I";
     baseIndex = 1;
 
     extraConfig = ''
+      ${darwinExtraConfig}
+
+      set -g default-terminal "xterm-256color"
+
       # Mouse support
       set -g mouse on
 

@@ -48,8 +48,5 @@
         quarantine-permit = "sudo xattr -r -d com.apple.quarantine";
       };
     };
-
-    # Custom
-    programs.tmux.alisaLabCustom.autoStart = true;
   };
 }
