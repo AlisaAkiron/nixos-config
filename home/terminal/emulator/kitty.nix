@@ -3,7 +3,7 @@
 {
   programs.kitty = {
     enable = true;
-    package = pkgs.kitty;
+    package = (import ../../../packages/kitty-with-custom-icon { inherit pkgs; });
     catppuccin.enable = true;
     font = {
       name = "CaskaydiaCove Nerd Font";
