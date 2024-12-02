@@ -14,8 +14,9 @@
       lt3 = "ls -lT -L=3";
       # bat
       cat = "bat";
-      catl = "bat --paging=never -l log";
-      fzfp = ''fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"'';
+      cat-log = "bat --paging=never --language=log";
+      cat-help = "bat --plain --language=help";
+      fzf-preview = ''fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"'';
       # proxy
       useproxy = "export http_proxy=http://127.0.0.1:7890 https_proxy=http://127.0.0.1:7890";
       useproxy-router = "export http_proxy=http://10.233.0.1:7890 https_proxy=http://10.233.0.1:7890";
@@ -124,6 +125,7 @@
     };
     syntaxHighlighting = {
       enable = true;
+      catppuccin.enable = true;
     };
   };
 }

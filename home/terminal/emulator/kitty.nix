@@ -4,6 +4,7 @@
   programs.kitty = {
     enable = true;
     package = pkgs.kitty;
+    catppuccin.enable = true;
     font = {
       name = "CaskaydiaCove Nerd Font";
       size = 16;
@@ -12,7 +13,6 @@
       mode = "no-rc";
       enableZshIntegration = true;
     };
-    themeFile = "Catppuccin-Mocha";
     keybindings = {
       # Clipboard
       "ctrl+c" = "copy_or_interrupt";

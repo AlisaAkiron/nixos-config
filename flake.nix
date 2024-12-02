@@ -23,6 +23,7 @@
     };
 
     wezterm.url = "github:wez/wezterm?dir=nix";
+    catppuccin.url = "github:catppuccin/nix";
 
     # hyprwm
     hyprland.url = "github:hyprwm/Hyprland";
@@ -52,6 +53,7 @@
     {
       nix-darwin,
       nixpkgs,
+      catppuccin,
       nur,
       ...
     }@inputs:
@@ -66,6 +68,7 @@
 
           modules = [
             nur.nixosModules.nur
+            catppuccin.nixosModules.catppuccin
             ./hosts/neptune-nixos
           ];
         };
@@ -77,6 +80,7 @@
             inherit inputs;
           };
           modules = [
+            catppuccin.nixosModules.catppuccin
             ./hosts/galaxy-wsl2
           ];
         };

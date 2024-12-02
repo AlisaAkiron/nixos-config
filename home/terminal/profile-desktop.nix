@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./emulator/wezterm.nix
+    ./emulator/kitty.nix
 
     ./programs
 

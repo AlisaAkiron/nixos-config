@@ -7,6 +7,9 @@
 
   home-manager.users.alisa = {
     imports = [
+      # Catppuccin Theme
+      inputs.catppuccin.homeManagerModules.catppuccin
+
       # Developer
       ./developer/common.nix
 

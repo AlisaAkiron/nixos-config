@@ -11,6 +11,9 @@
 
   home-manager.users.alisa = {
     imports = [
+      # Catppuccin Theme
+      inputs.catppuccin.homeManagerModules.catppuccin
+
       # Editors
       ./editors/vscode
       ./editors/jetbrains

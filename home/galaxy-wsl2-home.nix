@@ -7,6 +7,9 @@
 
   home-manager.users.alisa = {
     imports = [
+      # Catppuccin Theme
+      inputs.catppuccin.homeManagerModules.catppuccin
+
       # Developer
       ./developer/common.nix
       ./developer/dotnet
@@ -14,6 +17,11 @@
       # Terminal
       ./terminal/profile-tty.nix
     ];
+
+    catppuccin = {
+      accent = "pink";
+      flavor = "mocha";
+    };
 
     home.packages = [
       (import ../packages/dfx { inherit pkgs; })

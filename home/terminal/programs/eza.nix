@@ -7,6 +7,10 @@
     enableZshIntegration = true;
     git = true;
     icons = "auto";
+    colors = "always";
+    extraOptions = [
+      "--group-directories-first"
+    ];
   };
 
   # From: https://github.com/eza-community/eza-themes/blob/main/themes/catppuccin.yml
