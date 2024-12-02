@@ -9,7 +9,6 @@
     ./git.nix
     ./ripgrep.nix
     ./ssh.nix
-    ./tmux.nix
     ./zoxide.nix
   ];
 

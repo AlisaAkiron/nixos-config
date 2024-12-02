@@ -28,8 +28,5 @@
     ];
 
     programs.git.signing.gpgPath = "/mnt/d/Developer/GnuPG/bin/gpg.exe";
-
-    # Custom
-    programs.tmux.alisaLabCustom.autoStart = true;
   };
 }

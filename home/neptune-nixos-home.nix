@@ -68,8 +68,5 @@
         "DP-1, /home/alisa/Pictures/wallpapaer/aqua-2.jpg"
       ];
     };
-
-    # Custom
-    programs.tmux.alisaLabCustom.autoStart = true;
   };
 }
