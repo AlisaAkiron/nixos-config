@@ -7,6 +7,8 @@ let
     fi
   '';
   cfg = config.programs.tmux.alisaLabCustom;
+
+  extraInitScript = if cfg.autoStart then startTmuxScript else "";
 in
 {
   options.programs.tmux.alisaLabCustom = {
@@ -74,7 +76,10 @@ in
 
         # fnm
         eval "$(fnm env --use-on-cd --shell zsh)"
-      '';
+
+        # Extra
+	${extraInitScript}
+	'';
       envExtra = ''
         # Custom Functions
         function rand {
@@ -137,7 +142,6 @@ in
           echo -n "$1" | base64 -D && echo ""
         }
       '';
-      loginExtra = if cfg.autoStart then startTmuxScript else "";
       autosuggestion = {
         enable = true;
       };
