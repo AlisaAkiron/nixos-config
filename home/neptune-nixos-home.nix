@@ -32,6 +32,7 @@
       # Softwares
       ./desktop/programs/1password.nix
       ./desktop/programs/software.nix
+      ./desktop/programs/obs.nix
     ];
 
     # Extra packages
