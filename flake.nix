@@ -66,7 +66,7 @@
           };
 
           modules = [
-            nur.nixosModules.nur
+            # nur.nixosModules.nur
             catppuccin.nixosModules.catppuccin
             ./hosts/neptune-nixos
           ];
