@@ -1,13 +1,14 @@
 { pkgs, ... }:
 
 {
+  catppuccin.bat.enable = true;
+
   programs.bat = {
     enable = true;
     package = pkgs.bat;
     extraPackages = with pkgs.bat-extras; [
       batgrep
     ];
-    catppuccin.enable = true;
   };
 
   home.sessionVariables = {

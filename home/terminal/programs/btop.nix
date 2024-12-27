@@ -1,6 +1,8 @@
 { ... }:
 
 {
+  catppuccin.btop.enable = true;
+
   programs.btop = {
     enable = true;
 
@@ -9,7 +11,5 @@
       truecolor = true;
       update_ms = 500;
     };
-
-    catppuccin.enable = true;
   };
 }

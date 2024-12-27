@@ -1,10 +1,11 @@
 { pkgs, ... }:
 
 {
+  catppuccin.fzf.enable = true;
+
   programs.fzf = {
     enable = true;
     package = pkgs.fzf;
-    catppuccin.enable = true;
     fileWidgetOptions = [
       "--preview 'bat --color=always --style=numbers --line-range=:500 {}'"
     ];

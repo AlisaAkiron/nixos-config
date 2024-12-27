@@ -1,9 +1,10 @@
 { ... }:
 
 {
+  catppuccin.starship.enable = true;
+
   programs.starship = {
     enable = true;
-    catppuccin.enable = true;
     settings = {
       format = "$all";
       command_timeout = 10000;
