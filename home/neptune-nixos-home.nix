@@ -37,7 +37,7 @@
 
     # Extra packages
     home.packages = with pkgs; [
-      rocmPackages.rocm-smi
+      # rocmPackages.rocm-smi
 
       # Game
       moonlight-qt

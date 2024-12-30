@@ -8,5 +8,5 @@
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  boot.loader.grub.catppuccin.enable = true;
+  catppuccin.grub.enable = true;
 }
