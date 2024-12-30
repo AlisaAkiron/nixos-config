@@ -5,13 +5,14 @@ let
 in
 {
   home.packages = with pkgs; [
-    gitFull
+    git
+    git-lfs
     git-credential-manager
   ];
 
   programs.git = {
     enable = true;
-    package = pkgs.gitFull;
+    package = pkgs.git;
     userName = "alisa";
     userEmail = "alisa@alisaqaq.moe";
     extraConfig = {
