@@ -3,6 +3,8 @@
 {
   imports = [
     inputs.home-manager.darwinModules.home-manager
+
+    ./terminal/emulator/ghostty-darwin.nix
   ];
 
   home-manager.users.alisa = {
@@ -21,6 +23,8 @@
 
       ./terminal/ssh/1password.nix
       ./terminal/ssh/public-server.nix
+
+      ./terminal/emulator/ghostty.nix
 
       # Editor
       ./editors/neovim
