@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./emulator/kitty.nix
+    ./emulator/ghostty.nix
 
     ./programs
 

@@ -24,8 +24,6 @@
       ./terminal/ssh/1password.nix
       ./terminal/ssh/public-server.nix
 
-      ./terminal/emulator/ghostty.nix
-
       # Editor
       ./editors/neovim
     ];
