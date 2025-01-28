@@ -7,6 +7,10 @@
     ./terminal/emulator/ghostty-darwin.nix
   ];
 
+  nixpkgs.overlays = [
+    inputs.morlana.overlays.default
+  ];
+
   home-manager.users.alisa = {
     imports = [
       # Catppuccin Theme
@@ -30,6 +34,7 @@
 
     home.packages = [
       (import ../packages/dfx { inherit pkgs; })
+      pkgs.morlana
     ];
 
     home.sessionPath = [
