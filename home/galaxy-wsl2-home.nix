@@ -10,6 +10,9 @@
       # Catppuccin Theme
       inputs.catppuccin.homeManagerModules.catppuccin
 
+      # Editor
+      ./editors/neovim
+
       # Developer
       ./developer/common.nix
       ./developer/dotnet

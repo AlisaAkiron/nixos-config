@@ -6,5 +6,6 @@
     micromamba # Mamba (for Python)
     fnm # NodeJS version manager
     lua # Lua
+    gcc # C Compiler
   ];
 }
