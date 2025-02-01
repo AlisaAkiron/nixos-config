@@ -20,7 +20,7 @@
     curl
 
     # Nix IDE
-    nixd
+    nil
     nixfmt-rfc-style
   ];
 }

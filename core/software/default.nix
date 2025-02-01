@@ -4,7 +4,6 @@
   imports = [
     ./nh.nix
     ./programs.nix
-    ./programs.nix
     ./packages.nix
   ];
 

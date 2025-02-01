@@ -45,21 +45,18 @@
 
     # Nix IDE
     "nix.enableLanguageServer" = true;
-    "nix.serverPath" = "nixd";
+    "nix.serverPath" = "nil";
     "nix.serverSettings" = {
-      "nixd" = {
+      "nil" = {
         "formatting" = {
           "command" = [ "nixfmt" ];
         };
-        "nixpkgs" = {
-          "expr" = "import <nixpkgs> { }";
-        };
-        "options" = {
-          "nixos" = {
-            "expr" = "(builtins.getFlake \"/home/alisa/.nixos-config\").nixosConfigurations.neptune.options";
-          };
-          "home_manager" = {
-            "expr" = "(builtins.getFlake \"github:nix-community/home-manager\").nixosConfigurations.neptune.options";
+        "nix" = {
+          "maxMemoryMB" = 4096;
+          "flake" = {
+            "autoArchive" = true;
+            "autoEvalInputs" = true;
+            "nixpkgsInputName" = "nixpkgs";
           };
         };
       };
