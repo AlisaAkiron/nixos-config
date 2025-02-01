@@ -8,8 +8,11 @@
     ./software
 
     ./desktop/special/proxy.nix
-    ./nixos/virtualisation.nix
+
+    ./modules/docker.nix
   ];
+
+  bootloader.type = "systemd-boot";
 
   environment.sessionVariables = {
     FLAKE = "/home/alisa/.nixos-config";
@@ -17,6 +20,11 @@
 
   services.xserver.videoDrivers = [
     "amdgpu"
+  ];
+
+  virtualisation.docker.storageDriver = "btrfs";
+  virtualisation.docker.daemon.settings.registry-mirrors = [
+    "https://oci.alisaqaq.moe"
   ];
 
   security.pki.certificates = [

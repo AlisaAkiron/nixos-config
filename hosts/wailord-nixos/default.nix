@@ -4,21 +4,21 @@
   imports = [
     ./hardware-configuration.nix
 
-    ../../core/neptune-nixos-core.nix
-    ../../home/neptune-nixos-home.nix
+    ../../core/wailord-core.nix
+    ../../home/wailord-home.nix
+
     ../../options
   ];
 
-  networking.hostName = "neptune";
+  networking.hostName = "wailord";
   system.stateVersion = "25.05";
 
   alisa-nix = {
     os = "linux";
     tz = "Asia/Shanghai";
-    role = "workstation";
+    role = "server";
     network = {
-      location = "limited";
-      proxy = "http://127.0.0.1:7890";
+      location = "public";
     };
   };
 }
