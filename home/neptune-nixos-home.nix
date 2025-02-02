@@ -18,7 +18,6 @@
       ./editors/jetbrains
 
       # Developer
-      ./developer/common.nix
       ./developer/dotnet
 
       # Terminal
@@ -40,6 +39,12 @@
 
       # Game
       moonlight-qt
+
+      # Development
+      fnm
+      jdk
+      micromamba
+      lua
     ];
 
     # SSH

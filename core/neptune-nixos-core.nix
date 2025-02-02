@@ -9,7 +9,8 @@
     ./nixos
     ./software
 
-    ./desktop/special/proxy.nix
+    ./extra/clash-verge-rev.nix
+    ./extra/nix-proxy.nix
 
     ./modules/docker.nix
   ];

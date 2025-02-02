@@ -13,16 +13,22 @@
       ./editors/neovim
 
       # Developer
-      ./developer/common.nix
       ./developer/dotnet
 
       # Terminal
       ./terminal/profile-tty.nix
     ];
 
-    home.packages = [
-      (import ../packages/dfx { inherit pkgs; })
-    ];
+    home.packages =
+      [
+        (import ../packages/dfx { inherit pkgs; })
+      ]
+      ++ (with pkgs; [
+        fnm # Node.js version manager
+        jdk # Java Development Kit
+        lua # Lua programming language
+        micromamba # Conda package manager
+      ]);
 
     programs.git.signing.gpgPath = "/mnt/d/Developer/GnuPG/bin/gpg.exe";
   };

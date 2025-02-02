@@ -1,4 +1,4 @@
-{ lib, config, ... }:
+{ ... }:
 
 {
   imports = [
@@ -6,5 +6,5 @@
     ./nix-config.nix
     ./security.nix
     ./user.nix
-  ] ++ (lib.optionals (config.alisa-nix.os == "linux") [ ./nix-proxy.nix ]);
+  ];
 }
