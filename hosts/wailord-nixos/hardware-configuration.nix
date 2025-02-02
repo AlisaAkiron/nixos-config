@@ -23,7 +23,15 @@
     fsType = "ext4";
   };
 
-  swapDevices = [ ];
+  swapDevices = [
+    {
+      device = "/var/lib/swapfile";
+      size = 1024 * 4; # 4GB
+    }
+  ];
+  boot.kernel.sysctl = {
+    "vm.swappiness" = 60;
+  };
 
   networking.useDHCP = lib.mkDefault true;
 
