@@ -11,6 +11,8 @@
 
   home-manager.users.alisa = {
     imports = [
+      ../options/neptune-nixos-options.nix
+
       # Editors
       ./editors/vscode
       ./editors/jetbrains

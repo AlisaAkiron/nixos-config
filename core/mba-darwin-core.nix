@@ -2,8 +2,10 @@
 
 {
   imports = [
+    ../options/mba-darwin-options.nix
+
     inputs.home-manager.darwinModules.home-manager
-    
+
     ./darwin
 
     ./common/nix-config.nix

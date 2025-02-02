@@ -2,6 +2,8 @@
 
 {
   imports = [
+    ../options/galaxy-wsl2-options.nix
+
     ./common
     ./software
   ];

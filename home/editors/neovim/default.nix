@@ -1,4 +1,9 @@
-{ pkgs, ... }:
+{
+  lib,
+  pkgs,
+  config,
+  ...
+}:
 
 {
   programs.neovim = {
@@ -9,7 +14,7 @@
     vimdiffAlias = true;
   };
 
-  home.packages = with pkgs; [
-    gcc # For treesitter
+  home.packages = lib.mkIf (config.alisa-nix.os == "linux") [
+    pkgs.gcc
   ];
 }

@@ -1,11 +1,20 @@
-{ pkgs, ... }:
+{
+  lib,
+  config,
+  pkgs,
+  ...
+}:
 
 {
-  home.packages = with pkgs; [
-    jdk # JDK 21
-    micromamba # Mamba (for Python)
-    fnm # NodeJS version manager
-    lua # Lua
-    gcc # C Compiler
-  ];
+  home.packages =
+    with pkgs;
+    [
+      jdk # JDK 21
+      micromamba # Mamba (for Python)
+      fnm # NodeJS version manager
+      lua # Lua
+    ]
+    ++ lib.optional (config.alisa-nix.os == "linux") [
+      gcc # C Compiler
+    ];
 }

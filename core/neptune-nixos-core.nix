@@ -2,6 +2,8 @@
 
 {
   imports = [
+    ../options/neptune-nixos-options.nix
+
     ./common
     ./desktop
     ./nixos

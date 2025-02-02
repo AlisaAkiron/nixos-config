@@ -2,6 +2,8 @@
 
 {
   imports = [
+    ../options/wailord-nixos-options.nix
+
     ./common
     ./nixos
     ./software

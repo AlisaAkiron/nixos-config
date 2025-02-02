@@ -7,6 +7,8 @@
 
   home-manager.users.alisa = {
     imports = [
+      ../options/galaxy-wsl2-options.nix
+
       # Editor
       ./editors/neovim
 

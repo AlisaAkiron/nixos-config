@@ -13,6 +13,8 @@
 
   home-manager.users.alisa = {
     imports = [
+      ../options/mba-darwin-options.nix
+
       # Developer
       ./developer/common.nix
 
