@@ -14,8 +14,6 @@
     ./modules/docker.nix
   ];
 
-  bootloader.type = "systemd-boot";
-
   environment.sessionVariables = {
     FLAKE = "/home/alisa/.nixos-config";
   };
