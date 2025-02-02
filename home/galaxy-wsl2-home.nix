@@ -17,6 +17,10 @@
 
       # Terminal
       ./terminal/profile-tty.nix
+
+      ./terminal/extra/zsh/fnm.nix
+      ./terminal/extra/zsh/dotnet.nix
+      ./terminal/extra/zsh/proxy.nix
     ];
 
     home.packages =
