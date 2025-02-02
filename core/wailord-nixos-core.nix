@@ -10,4 +10,7 @@
   ];
 
   virtualisation.docker.storageDriver = "overlay2";
+
+  # use firewall provided by cloud provider
+  networking.firewall.enable = false;
 }
