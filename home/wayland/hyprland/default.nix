@@ -37,7 +37,6 @@
     hyprls
     xdg-desktop-portal-hyprland
     xdg-desktop-portal-gtk
-    kitty
     wayland
     slurp
     grimblast

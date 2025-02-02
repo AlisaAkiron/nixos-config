@@ -39,8 +39,6 @@
       device = config.bootloader.grub.device;
     };
 
-    catppuccin.grub.enable = true;
-
     boot.loader.efi.canTouchEfiVariables = true;
     boot.kernelPackages = pkgs.linuxPackages_latest;
   };

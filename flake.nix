@@ -3,8 +3,6 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nur.url = "github:nix-community/NUR";
-
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
 
     nix-darwin = {
@@ -24,8 +22,6 @@
       url = "github:anyrun-org/anyrun";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    catppuccin.url = "github:catppuccin/nix";
 
     # hyprwm
     hyprland.url = "github:hyprwm/Hyprland";
@@ -55,8 +51,6 @@
     {
       nix-darwin,
       nixpkgs,
-      catppuccin,
-      nur,
       ...
     }@inputs:
     {
@@ -69,8 +63,6 @@
           };
 
           modules = [
-            # nur.nixosModules.nur
-            catppuccin.nixosModules.catppuccin
             ./hosts/neptune-nixos
           ];
         };
@@ -82,7 +74,6 @@
             inherit inputs;
           };
           modules = [
-            catppuccin.nixosModules.catppuccin
             ./hosts/galaxy-wsl2
           ];
         };

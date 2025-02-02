@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   programs.neovim = {
@@ -8,4 +8,8 @@
     vimAlias = true;
     vimdiffAlias = true;
   };
+
+  home.packages = with pkgs; [
+    gcc # For treesitter
+  ];
 }

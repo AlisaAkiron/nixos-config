@@ -7,9 +7,6 @@
 
   home-manager.users.alisa = {
     imports = [
-      # Catppuccin Theme
-      inputs.catppuccin.homeManagerModules.catppuccin
-
       # Editor
       ./editors/neovim
 
@@ -20,11 +17,6 @@
       # Terminal
       ./terminal/profile-tty.nix
     ];
-
-    catppuccin = {
-      accent = "pink";
-      flavor = "mocha";
-    };
 
     home.packages = [
       (import ../packages/dfx { inherit pkgs; })

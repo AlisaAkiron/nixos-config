@@ -1,8 +1,6 @@
 { ... }:
 
 {
-  catppuccin.zsh-syntax-highlighting.enable = true;
-
   programs.zsh = {
     enable = true;
     shellAliases = {
