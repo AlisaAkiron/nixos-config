@@ -35,8 +35,6 @@
 
   home.packages = with pkgs; [
     hyprls
-    xdg-desktop-portal-hyprland
-    xdg-desktop-portal-gtk
     wayland
     slurp
     grimblast
