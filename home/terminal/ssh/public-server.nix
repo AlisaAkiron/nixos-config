@@ -3,9 +3,9 @@
 {
   programs.ssh = {
     extraConfig = ''
-      # Weedle
-      Host weedle
-        HostName weedle.alisaqaq.moe
+      # Wailord
+      Host wailord
+        HostName wailord.alisaqaq.moe
         User alisa
         Port 22
 
