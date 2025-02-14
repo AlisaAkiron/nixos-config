@@ -19,6 +19,7 @@
     unzip
     unrar
     gzip
+    ouch
 
     # utils
     gnumake
