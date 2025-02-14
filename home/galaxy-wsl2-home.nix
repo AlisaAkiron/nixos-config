@@ -34,6 +34,6 @@
         micromamba # Conda package manager
       ]);
 
-    programs.git.signing.gpgPath = "/mnt/d/Developer/GnuPG/bin/gpg.exe";
+    programs.git.signing.gpgPath = "/mnt/d/Scoop/Scoop Apps/apps/gpg4win/current/GnuPG/bin/gpg.exe";
   };
 }
