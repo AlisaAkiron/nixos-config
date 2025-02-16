@@ -23,16 +23,12 @@
       ./terminal/extra/zsh/proxy.nix
     ];
 
-    home.packages =
-      [
-        (import ../packages/dfx { inherit pkgs; })
-      ]
-      ++ (with pkgs; [
-        fnm # Node.js version manager
-        jdk # Java Development Kit
-        lua # Lua programming language
-        micromamba # Conda package manager
-      ]);
+    home.packages = with pkgs; [
+      fnm # Node.js version manager
+      jdk # Java Development Kit
+      lua # Lua programming language
+      micromamba # Conda package manager
+    ];
 
     programs.git.signing.gpgPath = "/mnt/d/Scoop/Scoop Apps/apps/gpg4win/current/GnuPG/bin/gpg.exe";
   };

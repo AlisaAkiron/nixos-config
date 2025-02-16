@@ -3,7 +3,11 @@
 {
   homebrew = {
     enable = true;
-    brews = [];
+    onActivation = {
+      cleanup = "uninstall";
+      upgrade = true;
+    };
+    brews = [ ];
     casks = [
       # Tools
       "1password-cli"
@@ -40,6 +44,10 @@
 
       # Creative
       "sigil"
+
+      # Dev Tools
+      "switchhosts"
+      "xcodes"
     ];
   };
 }

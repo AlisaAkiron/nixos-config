@@ -10,7 +10,5 @@
 
   nixpkgs.hostPlatform = "aarch64-darwin";
 
-  services.nix-daemon.enable = true;
-
   system.stateVersion = 5;
 }

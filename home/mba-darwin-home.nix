@@ -32,17 +32,13 @@
       ./editors/neovim
     ];
 
-    home.packages =
-      [
-        (import ../packages/dfx { inherit pkgs; })
-      ]
-      ++ (with pkgs; [
-        morlana # nh like tool for darwin
-        fnm # Node.js version manager
-        jdk # Java Development Kit
-        lua # Lua programming language
-        micromamba # Conda package manager
-      ]);
+    home.packages = with pkgs; [
+      morlana # nh like tool for darwin
+      fnm # Node.js version manager
+      jdk # Java Development Kit
+      lua # Lua programming language
+      micromamba # Conda package manager
+    ];
 
     home.sessionPath = [
       "/usr/local/share/dotnet" # .NET SDK (local install)
