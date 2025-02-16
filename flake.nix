@@ -2,6 +2,7 @@
   description = "Alisa's Nix/NixOS Flake";
 
   inputs = {
+    # NixOS / nixpkgs / WSL / Darwin / HM
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
 
@@ -18,12 +19,18 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # Terminal
+    zjstatus = {
+      url = "github:dj95/zjstatus";
+    };
+
+    # Desktop
     anyrun = {
       url = "github:anyrun-org/anyrun";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # hyprwm
+    # Hyprland
     hyprland.url = "github:hyprwm/Hyprland";
 
     hyprlock = {

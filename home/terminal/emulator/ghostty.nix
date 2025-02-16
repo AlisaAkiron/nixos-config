@@ -14,5 +14,16 @@ in
     font-size = 16
     theme = dark:catppuccin-mocha,light:catppuccin-latte
     window-padding-color = background
+
+    # for zellij
+    macos-option-as-alt = true
+    keybind = cmd+t=unbind
+    keybind = cmd+n=unbind
+    keybind = cmd+c=unbind
+    keybind = cmd+w=unbind
+    keybind = alt+left=unbind
+    keybind = alt+right=unbind
+    keybind = cmd+opt+left=unbind
+    keybind = cmd+opt+right=unbind
   '';
 }
