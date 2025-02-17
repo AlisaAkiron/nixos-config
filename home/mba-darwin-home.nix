@@ -38,6 +38,7 @@
       jdk # Java Development Kit
       lua # Lua programming language
       micromamba # Conda package manager
+      bun # Bun JS/TS runtime
     ];
 
     home.sessionPath = [
