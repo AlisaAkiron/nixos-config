@@ -26,6 +26,7 @@
       ./terminal/extra/zsh/fnm.nix
       ./terminal/extra/zsh/dotnet.nix
       ./terminal/extra/zsh/proxy.nix
+      ./terminal/extra/zsh/zellij.nix
 
       # Desktop
       ./desktop/common
