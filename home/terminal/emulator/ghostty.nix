@@ -14,6 +14,9 @@ in
     font-size = 16
     theme = dark:catppuccin-mocha,light:catppuccin-latte
     window-padding-color = background
+    cursor-style = bar
+    cursor-style-blink = true
+    shell-integration-features = no-cursor
 
     # for zellij
     macos-option-as-alt = true
