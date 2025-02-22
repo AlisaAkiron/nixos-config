@@ -23,6 +23,8 @@
       # Terminal
       ./terminal/profile-desktop.nix
 
+      ./terminal/extra/programs/zellij.nix
+
       ./terminal/extra/zsh/fnm.nix
       ./terminal/extra/zsh/dotnet.nix
       ./terminal/extra/zsh/proxy.nix

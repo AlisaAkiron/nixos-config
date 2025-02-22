@@ -24,6 +24,8 @@
       ./terminal/ssh/1password.nix
       ./terminal/ssh/public-server.nix
 
+      ./terminal/extra/programs/zellij.nix
+
       ./terminal/extra/zsh/fnm.nix
       ./terminal/extra/zsh/dotnet.nix
       ./terminal/extra/zsh/proxy.nix
