@@ -10,9 +10,6 @@
   ];
 
   virtualisation.docker.storageDriver = "btrfs";
-  virtualisation.docker.daemon.settings.registry-mirrors = [
-    "https://harbor.maa-org.net/docker"
-  ];
 
   # use port forward on router
   networking.firewall.enable = false;
