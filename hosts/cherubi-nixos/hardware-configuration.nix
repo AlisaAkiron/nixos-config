@@ -20,7 +20,14 @@
     "sr_mod"
   ];
   boot.initrd.kernelModules = [ "dm-snapshot" ];
-  boot.kernelModules = [ "kvm-amd" ];
+  boot.kernelModules = [
+    "kvm-amd"
+    # Raid 1
+    "dm_raid"
+    "dm_mirror"
+    "dm_mod"
+    "raid1"
+  ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" = {

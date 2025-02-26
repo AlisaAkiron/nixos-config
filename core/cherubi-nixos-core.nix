@@ -15,7 +15,6 @@
   networking.firewall.enable = false;
 
   environment.systemPackages = with pkgs; [
-    zfs
     lvm2
   ];
 }
