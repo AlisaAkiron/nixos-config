@@ -10,7 +10,8 @@
     tz = "Asia/Shanghai";
     role = "server";
     network = {
-      location = "public";
+      location = "limited";
+      proxy = "http://172.20.1.1:7890";
     };
   };
 }
