@@ -31,6 +31,6 @@
       bun # Bun JS/TS runtime
     ];
 
-    programs.git.signing.gpgPath = "/mnt/d/Scoop/Scoop Apps/apps/gpg4win/current/GnuPG/bin/gpg.exe";
+    programs.git.signing.signer = "/mnt/d/Scoop/Scoop Apps/apps/gpg4win/current/GnuPG/bin/gpg.exe";
   };
 }
