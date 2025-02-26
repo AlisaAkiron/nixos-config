@@ -52,6 +52,7 @@
       jdk
       micromamba
       lua
+      bun
     ];
 
     # SSH

@@ -28,6 +28,7 @@
       jdk # Java Development Kit
       lua # Lua programming language
       micromamba # Conda package manager
+      bun # Bun JS/TS runtime
     ];
 
     programs.git.signing.gpgPath = "/mnt/d/Scoop/Scoop Apps/apps/gpg4win/current/GnuPG/bin/gpg.exe";
