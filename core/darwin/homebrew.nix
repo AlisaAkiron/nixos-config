@@ -12,7 +12,6 @@
       # Tools
       "1password-cli"
       "gpg-suite"
-      "landrop"
       "maccy"
       "maczip"
       "raycast"
