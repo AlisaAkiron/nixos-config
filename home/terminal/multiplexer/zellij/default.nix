@@ -4,6 +4,10 @@ let
   modKey = if pkgs.stdenvNoCC.isDarwin then "Super" else "Ctrl";
 in
 {
+  imports = [
+    ./zsh.nix
+  ];
+
   home.packages = [
     inputs.zjstatus.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];

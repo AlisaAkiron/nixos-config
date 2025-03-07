@@ -17,7 +17,6 @@
     # archives
     zip
     unzip
-    unrar
     gzip
     ouch
 
