@@ -24,7 +24,7 @@
       ./terminal/ssh/1password.nix
       ./terminal/ssh/public-server.nix
 
-      # ./terminal/multiplexer/tmux
+      ./terminal/multiplexer/tmux
 
       ./terminal/extra/zsh/fnm.nix
       ./terminal/extra/zsh/dotnet.nix
