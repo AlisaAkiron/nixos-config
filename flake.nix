@@ -108,17 +108,6 @@
       };
 
       darwinConfigurations = {
-        # MacBook Air (M1, 2020) aarch64
-        Alisa-MacBook-Air = nix-darwin.lib.darwinSystem {
-          system = "aarch64-darwin";
-          specialArgs = {
-            inherit inputs;
-          };
-          modules = [
-            ./hosts/mba-darwin
-          ];
-        };
-
         # MacBook Pro (M4 Pro, 2024) aarch64
         Alisa-MacBook-Pro = nix-darwin.lib.darwinSystem {
           system = "aarch64-darwin";
