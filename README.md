@@ -4,9 +4,10 @@ This repository contains my personal Nix configuration files for NixOS, macOS an
 
 ## Hosts
 
-- `galaxy-wsl2` NixOS on Windows Subsystem for Linux 2, based on [nix-community/NixOS-WSL](https://github.com/nix-community/NixOS-WSL)
-- `neptune-nixos` NixOS on my workstation
+- `cherubi-nixos` NixOS server
+- `galaxy-wsl2` NixOS on WSL2
 - `mbp-darwin` MacBook Pro (M4 Pro, 2024) running macOS, using [LnL7/nix-darwin](https://github.com/LnL7/nix-darwin)
+- `wailord-nixos` NixOS server
 
 ## License
 

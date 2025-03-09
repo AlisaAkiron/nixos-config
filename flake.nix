@@ -23,35 +23,6 @@
     zjstatus = {
       url = "github:dj95/zjstatus";
     };
-
-    # Desktop
-    anyrun = {
-      url = "github:anyrun-org/anyrun";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    # Hyprland
-    hyprland.url = "github:hyprwm/Hyprland";
-
-    hyprlock = {
-      url = "github:hyprwm/hyprlock";
-      inputs = {
-        hyprlang.follows = "hyprland/hyprlang";
-        hyprutils.follows = "hyprland/hyprutils";
-        nixpkgs.follows = "hyprland/nixpkgs";
-        systems.follows = "hyprland/systems";
-      };
-    };
-
-    hyprpaper = {
-      url = "github:hyprwm/hyprpaper";
-      inputs = {
-        hyprlang.follows = "hyprland/hyprlang";
-        hyprutils.follows = "hyprland/hyprutils";
-        nixpkgs.follows = "hyprland/nixpkgs";
-        systems.follows = "hyprland/systems";
-      };
-    };
   };
 
   outputs =
@@ -62,18 +33,6 @@
     }@inputs:
     {
       nixosConfigurations = {
-        # NixOS (With Desktop) x86_64
-        neptune = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-          specialArgs = {
-            inherit inputs;
-          };
-
-          modules = [
-            ./hosts/neptune-nixos
-          ];
-        };
-
         # WSL2 (No Desktop) x86_64
         galaxy = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
