@@ -30,6 +30,8 @@
       ./terminal/extra/zsh/dotnet.nix
       ./terminal/extra/zsh/proxy.nix
 
+      ./terminal/extra/kubernetes
+
       # Editor
       ./editors/neovim
     ];
