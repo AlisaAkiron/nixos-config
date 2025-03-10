@@ -17,6 +17,7 @@
 
       # Dev Env
       ./devenv
+      ./developer
 
       # Terminal
       ./terminal/profile-desktop.nix
@@ -26,11 +27,7 @@
 
       # ./terminal/multiplexer/tmux
 
-      ./terminal/extra/zsh/fnm.nix
-      ./terminal/extra/zsh/dotnet.nix
       ./terminal/extra/zsh/proxy.nix
-
-      ./terminal/extra/kubernetes
 
       # Editor
       ./editors/neovim
@@ -38,11 +35,8 @@
 
     home.packages = with pkgs; [
       morlana # nh like tool for darwin
-      fnm # Node.js version manager
       jdk # Java Development Kit
-      lua # Lua programming language
       micromamba # Conda package manager
-      bun # Bun JS/TS runtime
     ];
 
     home.sessionPath = [
@@ -50,6 +44,13 @@
       "/Users/alisa/.dotnet/tools" # .NET Tools
       "/Users/alisa/Library/Application Support/JetBrains/Toolbox/scripts" # JetBrains Toolbox
     ];
+
+    developer = {
+      kubernetes = true;
+      web = true;
+      lua = true;
+      dotnet = false; # Use manual install
+    };
 
     programs.zsh = {
       initExtra = ''
