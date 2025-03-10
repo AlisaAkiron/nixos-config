@@ -47,6 +47,9 @@
       # Dev Tools
       "switchhosts"
       "xcodes"
+
+      # Network
+      "openvpn-connect"
     ];
   };
 }
