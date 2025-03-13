@@ -14,22 +14,8 @@ let
       os = [ "darwin" ];
       location = [ ];
     }
-    {
-      url = "https://anyrun.cachix.org";
-      role = [ "workstation" ];
-      os = [ "linux" ];
-      location = [ ];
-    }
-    {
-      url = "https://hyprland.cachix.org";
-      role = [ "workstation" ];
-      os = [ "linux" ];
-      location = [ ];
-    }
   ];
   trustedPublicKeys = [
-    "anyrun.cachix.org-1:pqBobmOjI7nKlsUMV25u9QHa9btJK65/C8vnO3p346s="
-    "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
     "ryanccn.cachix.org-1:Or82F8DeVLJgjSKCaZmBzbSOhnHj82Of0bGeRniUgLQ="
   ];
 
