@@ -2,11 +2,17 @@
 
 let
   allSubstitutes = [
+    # {
+    #   url = "https://mirrors.cernet.edu.cn/nix-channels/store";
+    #   role = [ ];
+    #   os = [ ];
+    #   location = [ "limited" ];
+    # }
     {
-      url = "https://mirrors.cernet.edu.cn/nix-channels/store";
+      url = "https://cache.nixos.org";
       role = [ ];
       os = [ ];
-      location = [ "limited" ];
+      location = [ ];
     }
     {
       url = "https://ryanccn.cachix.org";
