@@ -4,10 +4,14 @@
   homebrew = {
     enable = true;
     onActivation = {
+      autoUpdate = false;
       cleanup = "uninstall";
-      upgrade = true;
+      upgrade = false;
     };
-    brews = [ ];
+    brews = [
+      # Network
+      "cloudflared"
+    ];
     casks = [
       # Tools
       "1password-cli"
@@ -27,7 +31,7 @@
       "font-caskaydia-cove-nerd-font"
       "font-fira-code"
       "font-intel-one-mono"
-      "font-maple-mono-nf"
+      "font-maple-mono-nf-cn"
       "font-geist-mono-nerd-font"
       "font-inter"
 
