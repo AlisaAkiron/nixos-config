@@ -19,13 +19,14 @@
       ./devenv
       ./developer
 
+      ./developer/python
+      ./developer/minio
+
       # Terminal
       ./terminal/profile-desktop.nix
 
       ./terminal/ssh/1password.nix
       ./terminal/ssh/public-server.nix
-
-      # ./terminal/multiplexer/tmux
 
       ./terminal/extra/zsh/proxy.nix
 
@@ -36,7 +37,6 @@
     home.packages = with pkgs; [
       morlana # nh like tool for darwin
       jdk # Java Development Kit
-      micromamba # Conda package manager
     ];
 
     home.sessionPath = [

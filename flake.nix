@@ -18,11 +18,6 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    # Terminal
-    zjstatus = {
-      url = "github:dj95/zjstatus";
-    };
   };
 
   outputs =
