@@ -6,8 +6,8 @@
     fsType = "xfs";
   };
 
-  fileSystems."/mnt/backup" = {
-    device = "/dev/mapper/backup-data";
-    fsType = "ext4";
-  };
+  # fileSystems."/mnt/backup" = {
+  #   device = "/dev/mapper/backup-data";
+  #   fsType = "ext4";
+  # };
 }
