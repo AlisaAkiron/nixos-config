@@ -44,6 +44,7 @@
       # Multimedia
       "iina"
       "losslesscut"
+      "sonobus"
 
       # Creative
       "sigil"
