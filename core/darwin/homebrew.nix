@@ -52,6 +52,7 @@
       # Dev Tools
       "switchhosts"
       "xcodes"
+      "hoppscotch"
 
       # Network
       "openvpn-connect"
