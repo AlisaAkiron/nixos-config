@@ -40,6 +40,7 @@
       "calibre"
       "coconutbattery"
       "discord"
+      "teamspeak-client@beta"
 
       # Multimedia
       "iina"
