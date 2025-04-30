@@ -49,6 +49,7 @@
 
       # Creative
       "sigil"
+      "drawio"
 
       # Dev Tools
       "switchhosts"
