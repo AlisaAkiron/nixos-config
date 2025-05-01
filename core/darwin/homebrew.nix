@@ -55,6 +55,7 @@
       "switchhosts"
       "xcodes"
       "hoppscotch"
+      "orbstack"
 
       # Network
       "openvpn-connect"
