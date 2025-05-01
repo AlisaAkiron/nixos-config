@@ -59,6 +59,7 @@
 
       # Network
       "openvpn-connect"
+      "c0re100-qbittorrent"
     ];
   };
 }
