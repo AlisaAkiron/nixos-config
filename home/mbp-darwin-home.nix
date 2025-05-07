@@ -15,6 +15,8 @@
     imports = [
       ../options/mbp-darwin-options.nix
 
+      ./darwin
+
       # Dev Env
       ./devenv
       ./developer
