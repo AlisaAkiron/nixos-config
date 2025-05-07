@@ -36,7 +36,6 @@
 
     home.packages = with pkgs; [
       morlana # nh like tool for darwin
-      jdk # Java Development Kit
     ];
 
     home.sessionPath = [
@@ -56,6 +55,10 @@
       initExtra = ''
         # Homebrew
         eval "$(/opt/homebrew/bin/brew shellenv)"
+
+        # JEnv
+        export PATH="$HOME/.jenv/bin:$PATH"
+        eval "$(jenv init -)"
       '';
       shellAliases = {
         quarantine-permit = "sudo xattr -r -d com.apple.quarantine";

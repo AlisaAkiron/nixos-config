@@ -11,6 +11,9 @@
     brews = [
       # Network
       "cloudflared"
+
+      # Dev Tools
+      "jenv"
     ];
     casks = [
       # Tools
@@ -46,6 +49,7 @@
       "iina"
       "losslesscut"
       "sonobus"
+      "moonlight"
 
       # Creative
       "sigil"
@@ -56,6 +60,7 @@
       "xcodes"
       "hoppscotch"
       "orbstack"
+      "transmit"
 
       # Network
       "openvpn-connect"
