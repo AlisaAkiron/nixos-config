@@ -9,7 +9,7 @@
   ];
 
   programs.zsh = {
-    initExtra = ''
+    initContent = ''
       # kubectl
       source <(kubectl completion zsh)
 

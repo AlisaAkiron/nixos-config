@@ -1,7 +1,7 @@
 { ... }:
 
 {
-  programs.zsh.initExtra = ''
+  programs.zsh.initContent = ''
     # zsh parameter completion for the dotnet CLI
     _dotnet_zsh_complete()
     {

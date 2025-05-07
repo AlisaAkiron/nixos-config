@@ -54,7 +54,7 @@
     };
 
     programs.zsh = {
-      initExtra = ''
+      initContent = ''
         # Homebrew
         eval "$(/opt/homebrew/bin/brew shellenv)"
 
