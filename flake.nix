@@ -2,8 +2,8 @@
   description = "Alisa's Nix/NixOS Flake";
 
   inputs = {
-    # NixOS / nixpkgs / WSL / Darwin / HM
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
 
     nix-darwin = {
@@ -26,62 +26,39 @@
       nixpkgs,
       ...
     }@inputs:
+    let
+      nixos-systems = import ./os/nixos.nix;
+      darwin-systems = import ./os/darwin.nix;
+
+      mkConfiguration =
+        { systems, mkSystem }:
+        builtins.listToAttrs (
+          builtins.concatMap (
+            sys:
+            builtins.map (host: {
+              name = host;
+              value = mkSystem {
+                system = sys.system;
+                specialArgs = {
+                  inherit inputs;
+                };
+                modules = [
+                  (sys.moduleResolver host)
+                ];
+              };
+            }) sys.hosts
+          ) systems
+        );
+    in
     {
-      nixosConfigurations = {
-        # WSL2 (No Desktop) x86_64
-        galaxy = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-          specialArgs = {
-            inherit inputs;
-          };
-          modules = [
-            ./hosts/galaxy-wsl2
-          ];
-        };
-
-        # SERVERS
-        wailord = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-          specialArgs = {
-            inherit inputs;
-          };
-          modules = [
-            ./hosts/wailord-nixos
-          ];
-        };
-
-        cherubi = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-          specialArgs = {
-            inherit inputs;
-          };
-          modules = [
-            ./hosts/cherubi-nixos
-          ];
-        };
-
-        owo = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-          specialArgs = {
-            inherit inputs;
-          };
-          modules = [
-            ./hosts/owo-nixos
-          ];
-        };
+      nixosConfigurations = mkConfiguration {
+        systems = nixos-systems;
+        mkSystem = nixpkgs.lib.nixosSystem;
       };
 
-      darwinConfigurations = {
-        # MacBook Pro (M4 Pro, 2024) aarch64
-        Alisa-MacBook-Pro = nix-darwin.lib.darwinSystem {
-          system = "aarch64-darwin";
-          specialArgs = {
-            inherit inputs;
-          };
-          modules = [
-            ./hosts/mbp-darwin
-          ];
-        };
+      darwinConfigurations = mkConfiguration {
+        systems = darwin-systems;
+        mkSystem = nix-darwin.lib.darwinSystem;
       };
     };
 }
