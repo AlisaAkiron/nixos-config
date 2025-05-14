@@ -22,7 +22,7 @@
     imports = [
       ../../options/neptune-vm-nixos-options.nix
 
-      ../home/profiles/server.nix
+      ../../home/profiles/server.nix
     ];
   };
 }
