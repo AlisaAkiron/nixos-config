@@ -1,13 +1,13 @@
 [
   {
-    moduleResolver = host: ../hosts/wsl/${host};
+    moduleResolver = host: [ ../hosts/wsl/${host} ];
     system = "x86_64-linux";
     hosts = [
       "galaxy" # Alisa PC
     ];
   }
   {
-    moduleResolver = host: ../hosts/server/${host};
+    moduleResolver = host: [ ../hosts/server/${host} ];
     system = "x86_64-linux";
     hosts = [
       # Public Cloud
@@ -21,7 +21,10 @@
     ];
   }
   {
-    moduleResolver = host: ../hosts/neptune/${host}.nix;
+    moduleResolver = host: [
+      ../hosts/neptune/${host}.nix
+      ../options/neptune-vm-nixos-options.nix
+    ];
     system = "x86_64-linux";
     hosts = [
       "togepi" # 100

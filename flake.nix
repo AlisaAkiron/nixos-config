@@ -42,9 +42,7 @@
                 specialArgs = {
                   inherit inputs;
                 };
-                modules = [
-                  (sys.moduleResolver host)
-                ];
+                modules = sys.moduleResolver host;
               };
             }) sys.hosts
           ) systems
