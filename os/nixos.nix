@@ -22,7 +22,7 @@
   }
   {
     moduleResolver = host: [
-      ../hosts/neptune/${host}.nix
+      ../hosts/neptune/${host}
       ../options/neptune-vm-nixos-options.nix
     ];
     system = "x86_64-linux";
