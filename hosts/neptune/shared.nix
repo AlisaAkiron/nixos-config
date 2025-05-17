@@ -17,6 +17,11 @@
   boot.loader.systemd-boot.configurationLimit = 10;
 
   virtualisation.docker.storageDriver = "btrfs";
+  virtualisation.docker.daemon.settings = {
+    "registry-mirrors" = [
+      "https://oci.alisaqaq.moe"
+    ];
+  };
 
   home-manager.users.alisa = {
     imports = [
