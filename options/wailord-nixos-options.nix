@@ -8,7 +8,7 @@
   alisa-nix = {
     os = "linux";
     tz = "Asia/Shanghai";
-    role = "server";
+    role = "cloud-server";
     network = {
       location = "public";
     };

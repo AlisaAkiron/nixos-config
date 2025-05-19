@@ -8,10 +8,10 @@
   alisa-nix = {
     os = "linux";
     tz = "Asia/Shanghai";
-    role = "server";
+    role = "homelab-server";
     network = {
       location = "limited";
-      proxy = "http://owo.pikachu.alisaqaq.moe:7890";
+      proxy = "http://mihomo.pikachu.alisaqaq.moe:7890";
     };
   };
 }

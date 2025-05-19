@@ -9,6 +9,7 @@
   ];
 
   nixpkgs.hostPlatform = "aarch64-darwin";
+  system.primaryUser = "alisa";
 
   system.stateVersion = 5;
 }

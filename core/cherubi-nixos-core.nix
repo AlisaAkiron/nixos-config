@@ -6,7 +6,7 @@
 
     ./profiles/server.nix
 
-    ./modules/docker.nix
+    ./modules/docker
   ];
 
   virtualisation.docker.storageDriver = "btrfs";

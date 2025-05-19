@@ -18,8 +18,9 @@
 
     role = lib.mkOption {
       type = lib.types.enum [
+        "homelab-server"
+        "cloud-server"
         "workstation"
-        "server"
       ];
       default = "workstation";
     };
@@ -38,6 +39,5 @@
         default = "";
       };
     };
-
   };
 }

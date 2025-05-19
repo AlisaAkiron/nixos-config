@@ -7,7 +7,7 @@
     ../../options/neptune-vm-nixos-options.nix
 
     ../../core/profiles/server.nix
-    ../../core/modules/docker.nix
+    ../../core/modules/docker
 
     inputs.home-manager.nixosModules.home-manager
   ];
@@ -17,19 +17,6 @@
   boot.loader.systemd-boot.configurationLimit = 10;
 
   virtualisation.docker.storageDriver = "btrfs";
-  virtualisation.docker.autoPrune = {
-    enable = true;
-    dates = "weekly";
-    flags = [
-      "--all"
-    ];
-  };
-  virtualisation.docker.daemon.settings = {
-    "registry-mirrors" = [
-      "https://oci.alisaqaq.moe"
-    ];
-    "metrics-addr" = "0.0.0.0:9323";
-  };
 
   home-manager.users.alisa = {
     imports = [
