@@ -4,9 +4,9 @@
   imports = [
     ../options/cherubi-nixos-options.nix
 
-    ./profiles/server.nix
+    ./profiles/cloud-server.nix
 
-    ./modules/docker
+    ./modules/docker.nix
   ];
 
   virtualisation.docker.storageDriver = "btrfs";

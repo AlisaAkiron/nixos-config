@@ -2,12 +2,6 @@
 
 let
   allSubstitutes = [
-    # {
-    #   url = "https://mirrors.cernet.edu.cn/nix-channels/store";
-    #   role = [ ];
-    #   os = [ ];
-    #   location = [ "limited" ];
-    # }
     {
       url = "https://cache.nixos.org";
       role = [ ];

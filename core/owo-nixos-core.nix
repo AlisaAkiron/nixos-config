@@ -4,11 +4,8 @@
   imports = [
     ../options/owo-nixos-options.nix
 
-    ./profiles/server.nix
-
-    ./modules/docker
+    ./profiles/homelab-server.nix
   ];
 
   virtualisation.docker.storageDriver = "btrfs";
-  networking.firewall.enable = false;
 }

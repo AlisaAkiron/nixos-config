@@ -1,6 +1,21 @@
 { ... }:
 
 {
+  imports = [
+    ../common
+    ../nixos
+    ../software
+
+    ../modules/docker.nix
+  ];
+
+  environment.sessionVariables = {
+    FLAKE = "/home/alisa/.nixos-config";
+    NH_FLAKE = "/home/alisa/.nixos-config";
+  };
+
+  networking.firewall.enable = false;
+
   virtualisation.docker = {
     daemon.settings = {
       "registry-mirrors" = [
