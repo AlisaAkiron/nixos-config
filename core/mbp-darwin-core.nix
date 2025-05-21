@@ -8,6 +8,7 @@
 
     ./darwin
 
+    ./common/ca.nix
     ./common/nix-config.nix
     ./software/packages.nix
   ];
