@@ -58,9 +58,9 @@
       # Dev Tools
       "switchhosts"
       "xcodes"
-      "hoppscotch"
       "orbstack"
       "transmit"
+      "postman"
 
       # Network
       "openvpn-connect"
