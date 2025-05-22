@@ -4,8 +4,8 @@
   imports = [
     ./hardware-configuration.nix
 
-    ../../core/owo-nixos-core.nix
-    ../../home/owo-nixos-home.nix
+    ../../../core/owo-nixos-core.nix
+    ../../../home/owo-nixos-home.nix
   ];
 
   boot.loader.systemd-boot.enable = true;

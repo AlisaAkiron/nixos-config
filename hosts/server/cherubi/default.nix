@@ -5,8 +5,8 @@
     ./hardware-configuration.nix
     ./data-disk.nix
 
-    ../../core/cherubi-nixos-core.nix
-    ../../home/cherubi-nixos-home.nix
+    ../../../core/cherubi-nixos-core.nix
+    ../../../home/cherubi-nixos-home.nix
   ];
 
   boot.loader.systemd-boot.enable = true;

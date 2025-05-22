@@ -4,8 +4,8 @@
   imports = [
     ./hardware-configuration.nix
 
-    ../../core/wailord-nixos-core.nix
-    ../../home/wailord-nixos-home.nix
+    ../../../core/wailord-nixos-core.nix
+    ../../../home/wailord-nixos-home.nix
   ];
 
   boot.loader.grub.enable = true;
