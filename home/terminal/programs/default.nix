@@ -24,6 +24,7 @@
     gnumake
     fd
     file
+    sttr
 
     # multimedia
     ffmpeg
