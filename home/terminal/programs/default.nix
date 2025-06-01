@@ -5,6 +5,7 @@
     ./bat.nix
     ./btop.nix
     ./eza.nix
+    ./fd.nix
     ./fzf.nix
     ./git.nix
     ./ripgrep.nix
@@ -22,7 +23,6 @@
 
     # utils
     gnumake
-    fd
     file
     sttr
 

@@ -1,4 +1,9 @@
-{ config, lib, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 let
   extraAlias =
@@ -28,6 +33,10 @@ in
         cat-log = "bat --paging=never --language=log";
         cat-help = "bat --plain --language=help";
         fzf-preview = ''fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"'';
+        # sttr
+        s = "sttr";
+        b64 = "sttr base64-encode";
+        b64d = "sttr base64-decode";
       }
       extraAlias
     ];
@@ -36,76 +45,17 @@ in
       theme = "fino";
       plugins = [
         "git"
+        "fzf"
       ];
       extraConfig = ''
         CASE_SENSITIVE="true"
         HYPHEN_INSENSITIVE="true"
         DISABLE_MAGIC_FUNCTIONS="true"
         DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+        FZF_BASE="${pkgs.fzf.outPath}/bin/fzf"
       '';
     };
-    envExtra = ''
-      # Custom Functions
-      function rand {
-        length=32
-
-        if [ "$1" != "" ]
-        then
-          length=$1
-        fi
-
-        head -c 512 /dev/urandom | LC_CTYPE=C tr -cd 'a-zA-Z0-9' | head -c $length && echo ""
-      }
-
-      function randb64 {
-        length=32
-
-        if [ "$1" != "" ]
-        then
-          length=$1
-        fi
-
-        ori=$(head -c 512 /dev/urandom | LC_CTYPE=C tr -cd 'a-zA-Z0-9' | head -c $length)
-        b64=$(echo -n "$ori" | base64)
-
-        echo $ori
-        echo $b64
-      }
-
-      function rands {
-        length=32
-
-        if [ "$1" != "" ]
-        then
-          length=$1
-        fi
-
-        head -c 512 /dev/urandom | LC_CTYPE=C tr -cd 'a-zA-Z0-9!@;:.-+=*' | head -c $length && echo ""
-      }
-
-      function randb64s {
-        length=32
-
-        if [ "$1" != "" ]
-        then
-          length=$1
-        fi
-
-        ori=$(head -c 512 /dev/urandom | LC_CTYPE=C tr -cd 'a-zA-Z0-9!@;:.-+=*' | head -c $length)
-        b64=$(echo -n "$ori" | base64)
-
-        echo $ori
-        echo $b64
-      }
-
-      function b64 {
-        echo -n "$1" | base64
-      }
-
-      function b64d {
-        echo -n "$1" | base64 -D && echo ""
-      }
-    '';
     autosuggestion = {
       enable = true;
     };

@@ -4,6 +4,7 @@
   programs.fzf = {
     enable = true;
     package = pkgs.fzf;
+    defaultCommand = "fd --type f";
     fileWidgetOptions = [
       "--preview 'bat --color=always --style=numbers --line-range=:500 {}'"
     ];
