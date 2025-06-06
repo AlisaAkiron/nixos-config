@@ -50,6 +50,9 @@
       "losslesscut"
       "sonobus"
       "moonlight"
+      "ndi-tools"
+      "obs"
+      "distroav" # OBS NDI Plugin
 
       # Creative
       "sigil"
