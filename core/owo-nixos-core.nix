@@ -11,6 +11,9 @@
 
   environment.systemPackages = with pkgs; [
     cifs-utils
+
+    intel-media-driver
+    intel-gpu-tools
   ];
 
   fileSystems."/mnt/lapras" = {
