@@ -64,6 +64,7 @@
       "orbstack"
       "transmit"
       "postman"
+      "devcleaner"
 
       # Network
       "openvpn-connect"
