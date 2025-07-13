@@ -44,6 +44,7 @@
       "coconutbattery"
       "discord"
       "teamspeak-client@beta"
+      "telegram"
 
       # Multimedia
       "iina"
