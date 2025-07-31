@@ -22,7 +22,6 @@
       ./developer
 
       ./developer/python
-      ./developer/minio
 
       # Terminal
       ./terminal/profile-desktop.nix

@@ -45,6 +45,7 @@
       "discord"
       "teamspeak-client@beta"
       "telegram"
+      "unity-hub"
 
       # Multimedia
       "iina"
