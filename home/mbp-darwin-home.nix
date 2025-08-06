@@ -21,8 +21,6 @@
       ./devenv
       ./developer
 
-      ./developer/python
-
       # Terminal
       ./terminal/profile-desktop.nix
 
@@ -48,6 +46,8 @@
       web = true;
       lua = true;
       dotnet = false; # Use manual install
+      python = true;
+      cloud = true;
     };
 
     programs.zsh = {

@@ -16,6 +16,8 @@ in
       dotnet = mkEnableOption "dotnet development tools";
       lua = mkEnableOption "lua development tools";
       kubernetes = mkEnableOption "kubernetes development tools";
+      python = mkEnableOption "python development tools";
+      cloud = mkEnableOption "cloud development tools";
     };
   };
 
@@ -52,6 +54,26 @@ in
     ))
     (mkIf config.developer.kubernetes (
       import ./kubernetes {
+        inherit
+          config
+          lib
+          pkgs
+          inputs
+          ;
+      }
+    ))
+    (mkIf config.developer.python (
+      import ./python {
+        inherit
+          config
+          lib
+          pkgs
+          inputs
+          ;
+      }
+    ))
+    (mkIf config.developer.cloud (
+      import ./cloud {
         inherit
           config
           lib
