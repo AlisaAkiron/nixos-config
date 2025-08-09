@@ -62,7 +62,7 @@
 
       # Dev Tools
       "switchhosts"
-      "xcodes"
+      "xcodes-app"
       "orbstack"
       "transmit"
       "postman"
