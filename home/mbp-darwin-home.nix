@@ -19,7 +19,13 @@
 
       # Dev Env
       ./devenv
-      ./developer
+
+      ./developer/cloud
+      ./developer/embedded
+      ./developer/kubernetes
+      ./developer/web
+      ./developer/lua
+      ./developer/python
 
       # Terminal
       ./terminal/profile-desktop.nix
@@ -40,15 +46,6 @@
       "/Users/alisa/.dotnet/tools" # .NET Tools
       "/Users/alisa/Library/Application Support/JetBrains/Toolbox/scripts" # JetBrains Toolbox
     ];
-
-    developer = {
-      kubernetes = true;
-      web = true;
-      lua = true;
-      dotnet = false; # Use manual install
-      python = true;
-      cloud = true;
-    };
 
     programs.zsh = {
       initContent = ''
