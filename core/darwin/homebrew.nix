@@ -11,6 +11,7 @@
     brews = [
       # Network
       "cloudflared"
+      "syncthing"
 
       # Dev Tools
       "jenv"
