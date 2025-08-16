@@ -50,7 +50,6 @@
       # Multimedia
       "iina"
       "losslesscut"
-      "sonobus"
       "moonlight"
       "ndi-tools"
       "obs"
