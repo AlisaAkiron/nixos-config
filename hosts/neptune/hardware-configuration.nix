@@ -1,6 +1,7 @@
 {
   lib,
   modulesPath,
+  config,
   ...
 }:
 
@@ -36,12 +37,10 @@
     ];
   };
 
-  fileSystems."/mnt/vault" = {
+  fileSystems."/mnt/vault" = lib.mkIf config.neptune-vm.hasDataDrive {
     device = "/dev/disk/by-id/scsi-0QEMU_QEMU_HARDDISK_drive-scsi1";
     fsType = "btrfs";
   };
-
-  swapDevices = [ ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's
