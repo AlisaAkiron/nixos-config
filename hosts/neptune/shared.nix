@@ -7,7 +7,7 @@
     ../../core/neptune-vm-nixos.core.nix
     ../../home/neptune-vm-nixos-home.nix
 
-    ../options.nix
+    ./options.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
