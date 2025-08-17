@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./atuin.nix
     ./bat.nix
     ./btop.nix
     ./eza.nix
