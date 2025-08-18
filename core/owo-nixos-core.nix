@@ -11,10 +11,31 @@
 
   environment.systemPackages = with pkgs; [
     cifs-utils
-
-    intel-media-driver
-    intel-gpu-tools
   ];
+
+  environment.sessionVariables = {
+    LIBVA_DRIVER_NAME = "iHD";
+  };
+
+  hardware = {
+    enableAllFirmware = true;
+    intel-gpu-tools = {
+      enable = true;
+    };
+    graphics = {
+      enable = true;
+      extraPackages = with pkgs; [
+        intel-media-driver # For Broadwell (2014) or newer processors. LIBVA_DRIVER_NAME=iHD
+        libva-vdpau-driver # vaapiVdpau
+        intel-compute-runtime # OpenCL filter support (hardware tonemapping and subtitle burn-in)
+        intel-ocl # OpenCL support
+        vpl-gpu-rt # QSV on 11th gen or newer
+      ];
+      extraPackages32 = with pkgs; [
+        intel-media-drivere
+      ];
+    };
+  };
 
   fileSystems."/mnt/lapras" = {
     device = "//snorlax.pikachu.alisaqaq.moe/lapras";
