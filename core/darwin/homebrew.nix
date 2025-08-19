@@ -55,6 +55,7 @@
       "ndi-tools"
       "obs"
       "distroav" # OBS NDI Plugin
+      "handbrake"
 
       # Creative
       "sigil"
