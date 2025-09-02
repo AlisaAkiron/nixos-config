@@ -38,6 +38,9 @@
       "font-maple-mono-nf-cn"
       "font-geist-mono-nerd-font"
       "font-inter"
+      "font-monocraft"
+      "font-monocraft-nerd-font"
+      "font-sarasa-gothic" # 更纱黑体
 
       # Apps
       "appcleaner"
