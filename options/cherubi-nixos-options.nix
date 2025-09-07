@@ -11,7 +11,7 @@
     role = "cloud-server";
     network = {
       location = "limited";
-      proxy = "http://172.20.1.1:7890";
+      proxy = "http://proxy.office.quadripline.com:7890";
     };
   };
 }

@@ -9,7 +9,19 @@
     ./modules/docker.nix
   ];
 
-  virtualisation.docker.storageDriver = "btrfs";
+  virtualisation.docker = {
+    storageDriver = "btrfs";
+    daemon.settings = {
+      "registry-mirrors" = [
+        "https://oci.devops.quadripline.com"
+      ];
+      proxies = {
+        "http-proxy" = "http://proxy.office.quadripline.com:7890";
+        "https-proxy" = "http://proxy.office.quadripline.com:7890";
+        "no-proxy" = "localhost,127.0.0.0/8,10.0.0.0/8,*.quadripline.com";
+      };
+    };
+  };
 
   # use port forward on router
   networking.firewall.enable = false;
