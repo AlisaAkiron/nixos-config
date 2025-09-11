@@ -12,4 +12,12 @@
       ./profiles/server.nix
     ];
   };
+
+  home-manager.users.chingc = {
+    imports = [
+      ../options/cherubi-nixos-options.nix
+
+      ./profiles/server.nix
+    ];
+  };
 }

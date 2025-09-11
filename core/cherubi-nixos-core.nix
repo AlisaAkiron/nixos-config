@@ -7,6 +7,8 @@
     ./profiles/cloud-server.nix
 
     ./modules/docker.nix
+
+    ./external/chingc.nix
   ];
 
   virtualisation.docker = {
