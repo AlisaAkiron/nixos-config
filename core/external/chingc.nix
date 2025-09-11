@@ -12,7 +12,7 @@
       inherit inputs;
     };
 
-    users.alisa = {
+    users.chingc = {
       home.username = "chingc";
       home.homeDirectory = "/home/chingc";
       home.stateVersion = "24.05";
