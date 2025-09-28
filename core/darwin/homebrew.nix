@@ -20,10 +20,8 @@
       # Tools
       "1password-cli"
       "gpg-suite"
-      "maccy"
       "maczip"
       "raycast"
-      "stats"
 
       # MacOS Fix
       "mac-mouse-fix"
@@ -50,6 +48,7 @@
       "teamspeak-client@beta"
       "telegram"
       "unity-hub"
+      "onlyoffice"
 
       # Multimedia
       "iina"
