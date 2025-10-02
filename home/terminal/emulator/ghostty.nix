@@ -12,7 +12,7 @@ in
   xdg.configFile."ghostty/config".text = ''
     font-family = "Maple Mono NF CN"
     font-size = 16
-    theme = dark:catppuccin-mocha,light:catppuccin-latte
+    theme = dark:Catppuccin Mocha,light:Catppuccin Latte
     window-padding-balance = true
     window-padding-color = background
     cursor-style = bar
