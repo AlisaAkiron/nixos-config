@@ -4,9 +4,6 @@
   programs.bat = {
     enable = true;
     package = pkgs.bat;
-    extraPackages = with pkgs.bat-extras; [
-      batgrep
-    ];
   };
 
   home.sessionVariables = {

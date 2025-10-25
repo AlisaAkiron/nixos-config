@@ -13,9 +13,18 @@ in
   programs.git = {
     enable = true;
     package = pkgs.git;
-    userName = "alisa";
-    userEmail = "alisa@alisaqaq.moe";
-    extraConfig = {
+    settings = {
+      user = {
+        name = "alisa";
+        email = "alisa@alisaqaq.moe";
+        signingKey = "23B837CF0D5C91E404F06B148FCDF42EC5DD89D6";
+      };
+      commit = {
+        gpgSign = true;
+      };
+      tag = {
+        gpgSign = true;
+      };
       core = {
         autocrlf = "input";
       };
@@ -31,10 +40,6 @@ in
         };
         credentialStore = gitCredentialStore;
       };
-    };
-    signing = {
-      signByDefault = true;
-      key = "23B837CF0D5C91E404F06B148FCDF42EC5DD89D6";
     };
   };
 }
