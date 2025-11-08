@@ -19,6 +19,7 @@
 
   environment.etc."zprofile".text = ''
     export FLAKE="/Users/alisa/.nixos-config";
+    export NH_DARWIN_FLAKE="$FLAKE";
   '';
 
   environment.systemPackages = with pkgs; [
