@@ -1,13 +1,13 @@
 build:
 ifeq ($(shell uname),Darwin)
-    nh darwin build
+	nh darwin build .
 else
 	nh os build
 endif
 
 switch:
 ifeq ($(shell uname),Darwin)
-	nh darwin switch
+	nh darwin switch .
 else
 	nh os switch
 endif
