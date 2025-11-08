@@ -22,5 +22,9 @@
     # Nix IDE
     nil
     nixfmt-rfc-style
+
+    # Nix Utilities
+    nix-output-monitor
+    nvd
   ];
 }

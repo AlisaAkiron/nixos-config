@@ -17,4 +17,9 @@
   home.packages = lib.mkIf (config.alisa-nix.os == "linux") [
     pkgs.gcc
   ];
+
+  xdg.configFile."nvim" = {
+    source = ./nvim;
+    recursive = true;
+  };
 }

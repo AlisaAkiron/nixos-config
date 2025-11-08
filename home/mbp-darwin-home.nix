@@ -1,14 +1,10 @@
-{ inputs, pkgs, ... }:
+{ inputs, ... }:
 
 {
   imports = [
     inputs.home-manager.darwinModules.home-manager
 
     ./terminal/emulator/ghostty-darwin.nix
-  ];
-
-  nixpkgs.overlays = [
-    inputs.morlana.overlays.default
   ];
 
   home-manager.users.alisa = {
@@ -18,8 +14,6 @@
       ./darwin
 
       # Dev Env
-      ./devenv
-
       ./developer/cloud
       ./developer/embedded
       ./developer/kubernetes
@@ -35,10 +29,6 @@
 
       # Editor
       ./editors/neovim
-    ];
-
-    home.packages = with pkgs; [
-      morlana # nh like tool for darwin
     ];
 
     home.sessionPath = [

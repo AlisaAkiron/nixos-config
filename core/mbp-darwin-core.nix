@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ inputs, pkgs, ... }:
 
 {
   imports = [
@@ -20,6 +20,10 @@
   environment.etc."zprofile".text = ''
     export FLAKE="/Users/alisa/.nixos-config";
   '';
+
+  environment.systemPackages = with pkgs; [
+    nh
+  ];
 
   home-manager = {
     useUserPackages = true;

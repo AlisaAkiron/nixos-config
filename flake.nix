@@ -10,9 +10,6 @@
       url = "github:LnL7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    morlana = {
-      url = "github:ryanccn/morlana";
-    };
 
     home-manager = {
       url = "github:nix-community/home-manager";

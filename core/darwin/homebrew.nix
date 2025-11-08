@@ -61,6 +61,7 @@
       # Creative
       "sigil"
       "drawio"
+      "blender@lts"
 
       # Dev Tools
       "switchhosts"

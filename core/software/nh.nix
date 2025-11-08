@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ ... }:
 
 {
   programs.nh = {
@@ -9,9 +9,4 @@
       extraArgs = "--keep-since 7d --keep 5";
     };
   };
-
-  environment.systemPackages = with pkgs; [
-    nix-output-monitor
-    nvd
-  ];
 }
