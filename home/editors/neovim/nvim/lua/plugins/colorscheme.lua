@@ -6,6 +6,9 @@ return {
   name = "catppuccin",
   priority = 1000, -- Load colorscheme before other plugins
   config = function()
+    -- Store theme mode preference (auto, light, dark)
+    vim.g.theme_mode = vim.g.theme_mode or "auto"
+
     -- Function to detect OS color scheme preference
     local function get_os_appearance()
       -- Try macOS first
@@ -50,8 +53,19 @@ return {
       return "dark"
     end
 
-    -- Determine the flavour based on OS appearance
-    local appearance = get_os_appearance()
+    -- Function to get the current appearance based on theme_mode
+    local function get_current_appearance()
+      if vim.g.theme_mode == "light" then
+        return "light"
+      elseif vim.g.theme_mode == "dark" then
+        return "dark"
+      else -- "auto" or nil
+        return get_os_appearance()
+      end
+    end
+
+    -- Determine the flavour based on current appearance
+    local appearance = get_current_appearance()
     local flavour = appearance == "light" and "latte" or "mocha"
 
     require("catppuccin").setup({
@@ -135,9 +149,32 @@ return {
     -- Apply the colorscheme
     vim.cmd.colorscheme("catppuccin")
 
+    -- Create a command to set the theme mode
+    vim.api.nvim_create_user_command("SetTheme", function(opts)
+      local mode = opts.args
+      if mode ~= "auto" and mode ~= "light" and mode ~= "dark" then
+        vim.notify("Invalid theme mode. Use: auto, light, or dark", vim.log.levels.ERROR)
+        return
+      end
+
+      vim.g.theme_mode = mode
+      local new_appearance = get_current_appearance()
+      local new_flavour = new_appearance == "light" and "latte" or "mocha"
+      require("catppuccin").setup({ flavour = new_flavour })
+      vim.o.background = new_appearance
+      vim.cmd.colorscheme("catppuccin")
+      vim.notify("Theme mode set to: " .. mode .. " (" .. new_appearance .. ")", vim.log.levels.INFO)
+    end, {
+      nargs = 1,
+      complete = function()
+        return { "auto", "light", "dark" }
+      end,
+      desc = "Set theme mode (auto, light, or dark)",
+    })
+
     -- Create a command to manually refresh the theme
     vim.api.nvim_create_user_command("RefreshTheme", function()
-      local new_appearance = get_os_appearance()
+      local new_appearance = get_current_appearance()
       local new_flavour = new_appearance == "light" and "latte" or "mocha"
       require("catppuccin").setup({ flavour = new_flavour })
       vim.o.background = new_appearance
