@@ -11,41 +11,47 @@ return {
 
     -- Function to detect OS color scheme preference
     local function get_os_appearance()
+      local uname = vim.loop.os_uname()
+
       -- Try macOS first
-      local handle = io.popen("defaults read -g AppleInterfaceStyle 2>/dev/null")
-      if handle then
-        local result = handle:read("*a")
-        handle:close()
-        -- If the command returns "Dark", use dark mode
-        if result:match("Dark") then
-          return "dark"
-        elseif result == "" then
-          -- Empty result means light mode on macOS
-          return "light"
+      if uname.sysname == "Darwin" then
+        local handle = io.popen("defaults read -g AppleInterfaceStyle 2>/dev/null")
+        if handle then
+          local result = handle:read("*a")
+          handle:close()
+          -- If the command returns "Dark", use dark mode
+          if result:match("Dark") then
+            return "dark"
+          elseif result == "" then
+            -- Empty result means light mode on macOS
+            return "light"
+          end
         end
       end
 
       -- Try Linux (GNOME/GTK)
-      handle = io.popen("gsettings get org.gnome.desktop.interface color-scheme 2>/dev/null")
-      if handle then
-        local result = handle:read("*a")
-        handle:close()
-        if result:match("dark") then
-          return "dark"
-        elseif result:match("light") then
-          return "light"
+      if uname.sysname == "Linux" then
+        local handle = io.popen("gsettings get org.gnome.desktop.interface color-scheme 2>/dev/null")
+        if handle then
+          local result = handle:read("*a")
+          handle:close()
+          if result:match("dark") then
+            return "dark"
+          elseif result:match("light") then
+            return "light"
+          end
         end
-      end
 
-      -- Try KDE Plasma
-      handle = io.popen("kreadconfig5 --group General --key ColorScheme 2>/dev/null")
-      if handle then
-        local result = handle:read("*a")
-        handle:close()
-        if result:match("[Dd]ark") then
-          return "dark"
-        elseif result:match("[Ll]ight") then
-          return "light"
+        -- Try KDE Plasma
+        handle = io.popen("kreadconfig5 --group General --key ColorScheme 2>/dev/null")
+        if handle then
+          local result = handle:read("*a")
+          handle:close()
+          if result:match("[Dd]ark") then
+            return "dark"
+          elseif result:match("[Ll]ight") then
+            return "light"
+          end
         end
       end
 
