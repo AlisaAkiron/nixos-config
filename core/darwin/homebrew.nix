@@ -61,6 +61,7 @@
       # Creative
       "sigil"
       "drawio"
+      "kicad"
       "blender@lts"
 
       # Dev Tools
