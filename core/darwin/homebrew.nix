@@ -63,6 +63,7 @@
       "drawio"
       "kicad"
       "blender@lts"
+      "figma"
 
       # Dev Tools
       "switchhosts"
