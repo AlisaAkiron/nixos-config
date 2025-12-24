@@ -7,6 +7,7 @@
     ./profiles/cloud-server.nix
 
     ./modules/docker.nix
+    ./modules/rustdesk-server.nix
   ];
 
   virtualisation.docker.storageDriver = "overlay2";
