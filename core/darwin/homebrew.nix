@@ -49,6 +49,7 @@
       "telegram"
       "unity-hub"
       "onlyoffice"
+      "rustdesk"
 
       # Multimedia
       "iina"
