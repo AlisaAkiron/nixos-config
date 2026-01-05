@@ -15,6 +15,9 @@
 
       # Dev Tools
       "jenv"
+
+      # System Utils
+      "mole"
     ];
     casks = [
       # Tools
