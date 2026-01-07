@@ -9,7 +9,7 @@ nix-build:
       mew
       owo
     NIX_CONFIG: "experimental-features = nix-command flakes"
-    S3_URL: "s3://$S3_BUCKET_NAME?endpoint=$S3_ENDPOINT&region=$AWS_REGION&scheme=https"
+    S3_URL: "s3://$S3_BUCKET_NAME?endpoint=$S3_ENDPOINT&scheme=https"
   before_script:
     - |
       if [ -z "$AWS_ACCESS_KEY_ID" ]; then echo "Error: AWS_ACCESS_KEY_ID not set"; exit 1; fi
