@@ -34,7 +34,7 @@ nix-build:
     - STORE_PATHS=$(nix path-info $FLAKE_ARGS)
 
     - echo "Signing closure..."
-    - nix store sign --key-file <(echo "$NIX_SECRET_KEY") --recursive $STORE_PATHS
+    - nix store sign --key-file $NIX_SECRET_KEY --recursive $STORE_PATHS
 
     - echo "Uploading to S3..."
     - nix copy --to "$S3_URL" $STORE_PATHS
