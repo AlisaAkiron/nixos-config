@@ -14,8 +14,17 @@ let
       os = [ "darwin" ];
       location = [ ];
     }
+    {
+      url = "s3://nixos-cache?endpoint=s3.pikachu.alisaqaq.moe&scheme=https";
+      role = [
+        "homelab-server"
+      ];
+      os = [ "linux" ];
+      location = [ ];
+    }
   ];
   trustedPublicKeys = [
+    "s3.pikachu.alisaqaq.moe:i7lAtRS6MY30G8oe/sSXuewPKvsh3cnmxB+fU18rCcA="
     "ryanccn.cachix.org-1:Or82F8DeVLJgjSKCaZmBzbSOhnHj82Of0bGeRniUgLQ="
   ];
 
