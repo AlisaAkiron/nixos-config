@@ -1,0 +1,43 @@
+nix-build:
+  image: nixos/nix:latest
+  stage: build
+  variables:
+    BUILD_TARGETS: >
+      togepi
+      blissey
+      skwovet
+      mew
+      owo
+    NIX_CONFIG: "experimental-features = nix-command flakes"
+    S3_URL: "s3://$S3_BUCKET_NAME?endpoint=$S3_ENDPOINT&region=$AWS_REGION&scheme=https"
+  before_script:
+    - |
+      if [ -z "$AWS_ACCESS_KEY_ID" ]; then echo "Error: AWS_ACCESS_KEY_ID not set"; exit 1; fi
+  script:
+    - |
+      echo "Preparing to build targets: $BUILD_TARGETS"
+
+    - echo "Setup cache..."
+    - echo "substituters = $S3_URL https://cache.nixos.org/" >> /etc/nix/nix.conf
+    - echo "trusted-public-keys = s3.pikachu.alisaqaq.moe:i7lAtRS6MY30G8oe/sSXuewPKvsh3cnmxB+fU18rCcA= cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY= ryanccn.cachix.org-1:Or82F8DeVLJgjSKCaZmBzbSOhnHj82Of0bGeRniUgLQ=" >> /etc/nix/nix.conf
+
+    - |
+      FLAKE_ARGS=""
+      for HOST in $BUILD_TARGETS; do
+        FLAKE_ARGS="$FLAKE_ARGS .#nixosConfigurations.$HOST.config.system.build.toplevel"
+      done
+
+    - echo "Running unified build..."
+    - nix build $FLAKE_ARGS
+
+    - echo "Resolving store paths..."
+    - STORE_PATHS=$(nix path-info $FLAKE_ARGS)
+
+    - echo "Signing closure..."
+    - nix store sign --key-file <(echo "$NIX_SECRET_KEY") --recursive $STORE_PATHS
+
+    - echo "Uploading to S3..."
+    - nix copy --to "$S3_URL" $STORE_PATHS
+
+    - |
+      echo "Build and Cache complete for: $BUILD_TARGETS"

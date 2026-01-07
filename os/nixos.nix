@@ -1,12 +1,5 @@
 [
   {
-    moduleResolver = host: [ ../hosts/wsl/${host} ];
-    system = "x86_64-linux";
-    hosts = [
-      "galaxy" # Alisa PC
-    ];
-  }
-  {
     moduleResolver = host: [ ../hosts/server/${host} ];
     system = "x86_64-linux";
     hosts = [
@@ -31,7 +24,6 @@
       "blissey" # 101
       "skwovet" # 102
       "mew" # 103
-      "mime" # 104
     ];
   }
 ]
