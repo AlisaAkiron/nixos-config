@@ -15,6 +15,7 @@
 
       # Dev Tools
       "jenv"
+      "opencode"
 
       # System Utils
       "mole"
