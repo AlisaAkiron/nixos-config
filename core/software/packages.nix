@@ -21,7 +21,7 @@
 
     # Nix IDE
     nil
-    nixfmt-rfc-style
+    nixfmt
 
     # Nix Utilities
     nix-output-monitor
