@@ -3,6 +3,14 @@
 let
   allSubstitutes = [
     {
+      url = "s3://nixos-cache?endpoint=s3.pikachu.alisaqaq.moe&scheme=https";
+      role = [
+        "homelab-server"
+      ];
+      os = [ "linux" ];
+      location = [ ];
+    }
+    {
       url = "https://cache.nixos.org";
       role = [ ];
       os = [ ];
@@ -14,16 +22,9 @@ let
       os = [ "darwin" ];
       location = [ ];
     }
-    {
-      url = "s3://nixos-cache?endpoint=s3.pikachu.alisaqaq.moe&scheme=https";
-      role = [
-        "homelab-server"
-      ];
-      os = [ "linux" ];
-      location = [ ];
-    }
   ];
   trustedPublicKeys = [
+    "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
     "s3.pikachu.alisaqaq.moe:i7lAtRS6MY30G8oe/sSXuewPKvsh3cnmxB+fU18rCcA="
     "ryanccn.cachix.org-1:Or82F8DeVLJgjSKCaZmBzbSOhnHj82Of0bGeRniUgLQ="
   ];
