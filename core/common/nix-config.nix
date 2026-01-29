@@ -3,7 +3,7 @@
 let
   allSubstitutes = [
     {
-      url = "s3://nixos-cache?endpoint=s3.pikachu.alisaqaq.moe&scheme=https";
+      url = "s3://nixos-cache?endpoint=s3-ssd.pikachu.alisaqaq.moe&scheme=https";
       role = [
         "homelab-server"
       ];
@@ -25,7 +25,7 @@ let
   ];
   trustedPublicKeys = [
     "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
-    "s3.pikachu.alisaqaq.moe:i7lAtRS6MY30G8oe/sSXuewPKvsh3cnmxB+fU18rCcA="
+    "s3-ssd.pikachu.alisaqaq.moe:Somle3h4evAQRLxykhP+DJj3X1kdY+0xmfVijzJvz+o="
     "ryanccn.cachix.org-1:Or82F8DeVLJgjSKCaZmBzbSOhnHj82Of0bGeRniUgLQ="
   ];
 
