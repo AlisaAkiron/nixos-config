@@ -62,6 +62,7 @@
       "ndi-tools"
       "obs"
       "distroav" # OBS NDI Plugin
+      "finetune"
 
       # Creative
       "sigil"
@@ -77,6 +78,7 @@
       "transmit"
       "postman"
       "devcleaner"
+      "git-credential-manager"
 
       # Network
       "openvpn-connect"

@@ -1,14 +1,20 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 let
   gitCredentialStore = if pkgs.stdenvNoCC.isDarwin then "keychain" else "cache";
+  isNotDarwin = !pkgs.stdenvNoCC.isDarwin;
 in
 {
-  home.packages = with pkgs; [
-    git
-    git-lfs
-    git-credential-manager
-  ];
+  home.packages =
+    with pkgs;
+    [
+      git
+      git-lfs
+      serie # Commit graph visualizer
+    ]
+    ++ lib.optionals isNotDarwin [
+      git-credential-manager # Install via Homebrew on macOS
+    ];
 
   programs.git = {
     enable = true;
