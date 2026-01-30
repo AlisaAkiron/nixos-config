@@ -26,6 +26,7 @@
       "gpg-suite"
       "maczip"
       "raycast"
+      "parsec"
 
       # MacOS Fix
       "mac-mouse-fix"
