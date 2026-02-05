@@ -8,6 +8,10 @@
       cleanup = "uninstall";
       upgrade = false;
     };
+    taps = [
+      "skyhook-io/tap"
+      "jetbrains/utils"
+    ];
     brews = [
       # Network
       "cloudflared"
@@ -16,6 +20,8 @@
       # Dev Tools
       "jenv"
       "opencode"
+      "skyhook-io/tap/radar"
+      "jetbrains/utils/qodana"
 
       # System Utils
       "mole"
@@ -80,6 +86,7 @@
       "postman"
       "devcleaner"
       "git-credential-manager"
+      "claude-code"
 
       # Network
       "openvpn-connect"
