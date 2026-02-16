@@ -56,7 +56,6 @@
       "calibre"
       "coconutbattery"
       "discord"
-      "teamspeak-client@beta"
       "telegram"
       "unity-hub"
       "onlyoffice"
@@ -68,7 +67,6 @@
       "moonlight"
       "ndi-tools"
       "obs"
-      "distroav" # OBS NDI Plugin
       "finetune"
 
       # Creative
@@ -90,7 +88,6 @@
 
       # Network
       "openvpn-connect"
-      "c0re100-qbittorrent"
 
       # Setapp
       "setapp"
