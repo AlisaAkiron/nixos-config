@@ -88,6 +88,7 @@
 
       # Network
       "openvpn-connect"
+      "tailscale-app"
 
       # Setapp
       "setapp"
