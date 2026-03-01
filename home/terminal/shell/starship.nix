@@ -161,6 +161,14 @@
       spack = {
         symbol = "🅢 ";
       };
+      custom = {
+        proxy = {
+          command = "echo '🌐 proxy'";
+          when = ''[ -n "$http_proxy" ] || [ -n "$https_proxy" ]'';
+          format = "[$output]($style) ";
+          style = "bold yellow";
+        };
+      };
     };
   };
 }
