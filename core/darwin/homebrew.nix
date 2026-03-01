@@ -11,6 +11,7 @@
     taps = [
       "skyhook-io/tap"
       "jetbrains/utils"
+      "productdevbook/tap"
     ];
     brews = [
       # Network
@@ -32,7 +33,6 @@
       "gpg-suite"
       "maczip"
       "raycast"
-      "parsec"
 
       # MacOS Fix
       "mac-mouse-fix"
@@ -62,7 +62,6 @@
       "rustdesk"
 
       # Multimedia
-      "iina"
       "losslesscut"
       "moonlight"
       "ndi-tools"
@@ -71,7 +70,6 @@
 
       # Creative
       "sigil"
-      "drawio"
       "kicad"
       "blender@lts"
       "figma"
@@ -80,11 +78,11 @@
       "switchhosts"
       "xcodes-app"
       "orbstack"
-      "transmit"
       "postman"
       "devcleaner"
       "git-credential-manager"
       "claude-code"
+      "productdevbook/tap/portkiller"
 
       # Network
       "openvpn-connect"
