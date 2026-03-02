@@ -4,9 +4,13 @@
   programs.zoxide = {
     enable = true;
     package = pkgs.zoxide;
-    enableZshIntegration = true;
-    options = [
-      "--cmd cd"
-    ];
+    enableZshIntegration = false;
   };
+
+  programs.zsh.initContent = ''
+    # Zoxide
+    if [[ $- == *i* ]]; then
+      eval "$(${pkgs.zoxide}/bin/zoxide init zsh --cmd cd)"
+    fi
+  '';
 }

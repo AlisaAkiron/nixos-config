@@ -12,6 +12,7 @@
       "skyhook-io/tap"
       "jetbrains/utils"
       "productdevbook/tap"
+      "steipete/tap"
     ];
     brews = [
       # Network
@@ -81,8 +82,10 @@
       "postman"
       "devcleaner"
       "git-credential-manager"
+      "claude"
       "claude-code"
       "productdevbook/tap/portkiller"
+      "steipete/tap/codexbar"
 
       # Network
       "openvpn-connect"
