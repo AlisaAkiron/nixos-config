@@ -29,6 +29,9 @@
 
       # Editor
       ./editors/neovim
+
+      # Extra
+      ./terminal/extra/github/gh.nix
     ];
 
     home.sessionPath = [
