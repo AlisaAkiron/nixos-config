@@ -25,6 +25,9 @@
       "skyhook-io/tap/radar"
       "jetbrains/utils/qodana"
 
+      # Libraries
+      "sox" # Audio processing (required by Claude Code)
+
       # System Utils
       "mole"
     ];
@@ -58,7 +61,6 @@
       "coconutbattery"
       "discord"
       "telegram"
-      "unity-hub"
       "onlyoffice"
       "rustdesk"
 
