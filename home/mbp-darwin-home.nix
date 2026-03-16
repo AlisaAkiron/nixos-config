@@ -48,6 +48,13 @@
         # JEnv
         export PATH="$HOME/.jenv/bin:$PATH"
         eval "$(jenv init -)"
+
+        # Named directories
+        hash -d dl="$HOME/Downloads"
+        hash -d dt="$HOME/Desktop"
+        hash -d dev="$HOME/Developer"
+        hash -d prog="$HOME/Developer/Programs"
+        hash -d work="$HOME/Developer/Workspace"
       '';
       shellAliases = {
         quarantine-permit = "sudo xattr -r -d com.apple.quarantine";

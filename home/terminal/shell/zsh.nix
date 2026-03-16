@@ -40,6 +40,24 @@ in
       }
       extraAlias
     ];
+    shellGlobalAliases = {
+      C = "| pbcopy"; # Copy to clipboard (macOS)
+      P = "| bat";
+      G = "| rg";
+      J = "| jq";
+      NOUT = ">/dev/null";
+      NERR = "2>/dev/null";
+      NPRT = ">/dev/null 2>&1";
+    };
+    initContent = ''
+      # Enable editing the command line in $EDITOR
+      autoload -Uz edit-command-line
+      zle -N edit-command-line
+      bindkey '^X^E' edit-command-line
+
+      # Enable zmv
+      autoload -Uz zmv
+    '';
     oh-my-zsh = {
       enable = true;
       theme = "fino";
