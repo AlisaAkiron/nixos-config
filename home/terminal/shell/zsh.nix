@@ -48,6 +48,7 @@ in
       NOUT = ">/dev/null";
       NERR = "2>/dev/null";
       NPRT = ">/dev/null 2>&1";
+      DSP = "--dangerously-skip-permissions";
     };
     initContent = ''
       # Enable editing the command line in $EDITOR

@@ -32,6 +32,7 @@
 
       # Extra
       ./terminal/extra/github/gh.nix
+      ./terminal/extra/zsh/1password-cli.nix
     ];
 
     home.sessionPath = [
