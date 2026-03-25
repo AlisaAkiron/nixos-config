@@ -32,10 +32,13 @@
     snitch # Better netstat
 
     # multimedia
-    ffmpeg
-    ffmpegthumbnailer
-    imagemagick
-    poppler # PDF
+    ffmpeg # multimedia framework
+    ffmpegthumbnailer # video thumbnailer
+    imagemagick # image manipulation
+    exiftool # EXIF metadata manipulation
+    mediainfo # media file information
+    poppler-utils # PDF utilities
+    pandoc # document converter
     libwebp # WebP
     libjpeg # JPEG
     libpng # PNG
