@@ -88,6 +88,7 @@
       "claude-code"
       "productdevbook/tap/portkiller"
       "steipete/tap/codexbar"
+      "superset"
 
       # Network
       "openvpn-connect"
