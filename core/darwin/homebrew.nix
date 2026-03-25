@@ -89,6 +89,7 @@
       "productdevbook/tap/portkiller"
       "steipete/tap/codexbar"
       "superset"
+      "yaak"
 
       # Network
       "openvpn-connect"
