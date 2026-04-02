@@ -85,7 +85,6 @@
       "devcleaner"
       "git-credential-manager"
       "claude"
-      "claude-code"
       "productdevbook/tap/portkiller"
       "steipete/tap/codexbar"
       "superset"
