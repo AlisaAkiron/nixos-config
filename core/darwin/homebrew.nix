@@ -41,6 +41,7 @@
       # MacOS Fix
       "mac-mouse-fix"
       "notunes"
+      "openmtp"
 
       # Fonts
       "font-cascadia-code"

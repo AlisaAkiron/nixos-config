@@ -36,6 +36,7 @@
     ];
 
     home.sessionPath = [
+      "/Users/alisa/.local/bin"
       "/usr/local/share/dotnet" # .NET SDK (local install)
       "/Users/alisa/.dotnet/tools" # .NET Tools
       "/Users/alisa/Library/Application Support/JetBrains/Toolbox/scripts" # JetBrains Toolbox
