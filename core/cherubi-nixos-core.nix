@@ -9,6 +9,7 @@
     ./modules/docker.nix
 
     ./external/chingc.nix
+    ./external/shigure.nix
   ];
 
   virtualisation.docker = {

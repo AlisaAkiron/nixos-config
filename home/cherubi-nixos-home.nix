@@ -20,4 +20,12 @@
       ./profiles/server.nix
     ];
   };
+
+  home-manager.users.shigure = {
+    imports = [
+      ../options/cherubi-nixos-options.nix
+
+      ./profiles/server.nix
+    ];
+  };
 }
