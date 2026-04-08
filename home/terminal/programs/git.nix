@@ -19,6 +19,9 @@ in
   programs.git = {
     enable = true;
     package = pkgs.git;
+    signing = {
+      format = "openpgp";
+    };
     settings = {
       user = {
         name = "alisa";
