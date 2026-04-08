@@ -12,6 +12,9 @@
     viAlias = true;
     vimAlias = true;
     vimdiffAlias = true;
+    withPython3 = true;
+    withRuby = true;
+    withNodeJs = true;
   };
 
   home.packages = lib.mkIf (config.alisa-nix.os == "linux") [
