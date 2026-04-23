@@ -68,6 +68,7 @@
       # Multimedia
       "losslesscut"
       "moonlight"
+      "parsec"
       "ndi-tools"
       "obs"
       "finetune"
