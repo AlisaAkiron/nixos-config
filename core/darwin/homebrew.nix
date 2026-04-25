@@ -89,8 +89,14 @@
       "claude"
       "productdevbook/tap/portkiller"
       "steipete/tap/codexbar"
-      "superset"
       "yaak"
+
+      # Quicklook Extensions
+      "syntax-highlight" # Syntax Highlighting
+      "qlmarkdown" # Markdown Preview
+      "suspicious-package" # .pkg Installer Preview
+      "qlstephen" # Plain Text Preview
+      "quicklook-video" # Video Preview
 
       # Network
       "openvpn-connect"
