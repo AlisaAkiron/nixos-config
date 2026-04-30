@@ -13,6 +13,7 @@
       "jetbrains/utils"
       "productdevbook/tap"
       "steipete/tap"
+      "retlehs/tap"
     ];
     brews = [
       # Network
@@ -22,8 +23,9 @@
       # Dev Tools
       "jenv"
       "opencode"
-      "skyhook-io/tap/radar"
-      "jetbrains/utils/qodana"
+      "skyhook-io/tap/radar" # Kubernetes visibility tool
+      "jetbrains/utils/qodana" # JetBrains Code Quality Platform
+      "retlehs/tap/quien" # A better whois and domain intelligence toolkit
 
       # Libraries
       "sox" # Audio processing (required by Claude Code)
@@ -90,6 +92,7 @@
       "productdevbook/tap/portkiller"
       "steipete/tap/codexbar"
       "yaak"
+      "bruno"
 
       # Quicklook Extensions
       "syntax-highlight" # Syntax Highlighting
