@@ -23,6 +23,8 @@
       # Dev Tools
       "jenv"
       "opencode"
+      "opentofu"
+      "glab" # GitLab CLI
       "skyhook-io/tap/radar" # Kubernetes visibility tool
       "jetbrains/utils/qodana" # JetBrains Code Quality Platform
       "retlehs/tap/quien" # A better whois and domain intelligence toolkit
