@@ -10,6 +10,7 @@
     ./fzf.nix
     ./git.nix
     ./ripgrep.nix
+    ./s5cmd.nix
     ./ssh.nix
     ./yazi.nix
     ./zoxide.nix
@@ -28,7 +29,6 @@
     sttr # string manipulation
     tabiew # view and query tabular data files
     android-tools # Android Platform Tools
-    s5cmd # S3 API command line tool
     snitch # Better netstat
 
     # multimedia
