@@ -68,6 +68,7 @@
       "telegram"
       "onlyoffice"
       "rustdesk"
+      "trilium-notes" # Note-taking
 
       # Multimedia
       "losslesscut"
