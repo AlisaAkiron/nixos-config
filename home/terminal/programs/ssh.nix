@@ -4,24 +4,24 @@
   programs.ssh = {
     enable = true;
     enableDefaultConfig = false;
-    matchBlocks = {
+    settings = {
       "*" = {
         # security
-        forwardAgent = false;
-        forwardX11 = false;
+        ForwardAgent = false;
+        ForwardX11 = false;
         # keep alive
-        serverAliveInterval = 60;
-        serverAliveCountMax = 3;
+        ServerAliveInterval = 60;
+        ServerAliveCountMax = 3;
         # multiplexing
-        controlMaster = "auto";
-        controlPath = "~/.ssh/sockets/%r@%h-%p";
-        controlPersist = "10m";
+        ControlMaster = "auto";
+        ControlPath = "~/.ssh/sockets/%r@%h-%p";
+        ControlPersist = "10m";
         # known hosts
-        hashKnownHosts = false;
-        userKnownHostsFile = "~/.ssh/known_hosts";
+        HashKnownHosts = false;
+        UserKnownHostsFile = "~/.ssh/known_hosts";
         # miscellaneous
-        addKeysToAgent = "no";
-        compression = true;
+        AddKeysToAgent = "no";
+        Compression = true;
       };
     };
   };

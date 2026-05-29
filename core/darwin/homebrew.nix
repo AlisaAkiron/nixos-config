@@ -14,6 +14,7 @@
       "productdevbook/tap"
       "steipete/tap"
       "retlehs/tap"
+      "darrylmorley/whatcable"
     ];
     brews = [
       # Network
@@ -28,6 +29,7 @@
       "skyhook-io/tap/radar" # Kubernetes visibility tool
       "jetbrains/utils/qodana" # JetBrains Code Quality Platform
       "retlehs/tap/quien" # A better whois and domain intelligence toolkit
+      "codeburn"
 
       # Libraries
       "sox" # Audio processing (required by Claude Code)
@@ -41,6 +43,7 @@
       "gpg-suite"
       "maczip"
       "raycast"
+      "darrylmorley/whatcable/whatcable" # Cable Info
 
       # MacOS Fix
       "mac-mouse-fix"
@@ -94,7 +97,6 @@
       "claude"
       "productdevbook/tap/portkiller"
       "steipete/tap/codexbar"
-      "yaak"
       "bruno"
 
       # Quicklook Extensions

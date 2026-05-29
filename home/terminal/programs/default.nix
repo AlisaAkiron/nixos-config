@@ -9,6 +9,7 @@
     ./fd.nix
     ./fzf.nix
     ./git.nix
+    ./openssl.nix
     ./ripgrep.nix
     ./s5cmd.nix
     ./ssh.nix
