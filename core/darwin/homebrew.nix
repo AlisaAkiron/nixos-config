@@ -7,6 +7,9 @@
       autoUpdate = false;
       cleanup = "uninstall";
       upgrade = false;
+      # Homebrew 5.x requires --force/--force-cleanup/$HOMEBREW_ASK alongside
+      # --cleanup; nix-darwin doesn't add it yet, so pass it explicitly.
+      extraFlags = [ "--force-cleanup" ];
     };
     taps = [
       "skyhook-io/tap"

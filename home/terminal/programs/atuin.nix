@@ -13,6 +13,7 @@
       update_check = false;
       sync_address = "https://atuin.alisaqaq.moe";
       sync_frequency = "30m";
+      search_mode = "fuzzy";
     };
     themes = {
       "catppuccin-macchiato" = {
