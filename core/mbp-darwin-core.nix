@@ -10,6 +10,7 @@
 
     ./common/ca.nix
     ./common/nix-config.nix
+    ./common/overlays.nix
     ./software/packages.nix
   ];
 
