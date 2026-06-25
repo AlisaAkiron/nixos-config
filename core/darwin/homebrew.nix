@@ -55,6 +55,7 @@
       "mac-mouse-fix"
       "notunes"
       "openmtp"
+      "thaw"
 
       # Fonts
       "font-cascadia-code"
