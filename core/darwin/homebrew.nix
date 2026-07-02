@@ -16,7 +16,6 @@
       "jetbrains/utils"
       "productdevbook/tap"
       "steipete/tap"
-      "retlehs/tap"
       "darrylmorley/whatcable"
       "espressif/eim"
     ];
@@ -32,7 +31,6 @@
       "glab" # GitLab CLI
       "skyhook-io/tap/radar" # Kubernetes visibility tool
       "jetbrains/utils/qodana" # JetBrains Code Quality Platform
-      "retlehs/tap/quien" # A better whois and domain intelligence toolkit
       "codeburn"
       "espressif/eim/eim" # Espressif IoT Development Framework (ESP-IDF) Manager
       "cmake" # Build system (required by many C/C++ projects and also EIM)
@@ -42,6 +40,11 @@
 
       # System Utils
       "mole"
+
+      # Database System
+      "duckdb"
+      "postgresql@18"
+      "redis"
     ];
     casks = [
       # Tools
