@@ -3,6 +3,7 @@
 {
   homebrew = {
     enable = true;
+    enableZshIntegration = true;
     onActivation = {
       autoUpdate = false;
       cleanup = "uninstall";
@@ -10,6 +11,9 @@
       # Homebrew 5.x requires --force/--force-cleanup/$HOMEBREW_ASK alongside
       # --cleanup; nix-darwin doesn't add it yet, so pass it explicitly.
       extraFlags = [ "--force-cleanup" ];
+      extraEnv = {
+        HOMEBREW_NO_UPGRADE_AUTO_UPDATES_CASKS = "1";
+      };
     };
     taps = [
       "skyhook-io/tap"
@@ -81,7 +85,6 @@
       "telegram"
       "onlyoffice"
       "rustdesk"
-      "trilium-notes" # Note-taking
 
       # Multimedia
       "losslesscut"
@@ -94,6 +97,7 @@
       # Creative
       "sigil"
       "kicad"
+      "freecad"
       "blender@lts"
       "figma"
 
@@ -101,7 +105,6 @@
       "switchhosts"
       "xcodes-app"
       "orbstack"
-      "postman"
       "devcleaner"
       "git-credential-manager"
       "claude"
