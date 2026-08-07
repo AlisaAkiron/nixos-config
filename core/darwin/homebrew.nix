@@ -81,7 +81,6 @@
       "appcleaner"
       "calibre"
       "coconutbattery"
-      "discord"
       "telegram"
       "onlyoffice"
       "rustdesk"
@@ -120,7 +119,6 @@
       "quicklook-video" # Video Preview
 
       # Network
-      "openvpn-connect"
       "tailscale-app"
 
       # Setapp
