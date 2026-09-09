@@ -9,6 +9,15 @@
 
   virtualisation.docker.storageDriver = "btrfs";
 
+  boot.kernelModules = [ "tun" ];
+  boot.kernel.sysctl = {
+    "net.ipv4.conf.all.forwarding" = true;
+    "net.ipv4.conf.all.rp_filter" = 0;
+    "net.ipv4.conf.default.rp_filter" = 0;
+  };
+
+  virtualisation.docker.daemon.settings."ip-forward-no-drop" = true;
+
   environment.systemPackages = with pkgs; [
     cifs-utils
   ];
