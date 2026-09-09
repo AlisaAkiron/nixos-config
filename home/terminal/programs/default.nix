@@ -49,5 +49,7 @@
     yubikey-manager # YubiKey Manager
     yubico-piv-tool # YubiKey PIV tool
     nmap # network exploration tool
+    sops # encrypted secrets files (age/PGP/KMS)
+    secretspec # declarative secrets manifest, provider-agnostic
   ];
 }
