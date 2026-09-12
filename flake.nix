@@ -21,11 +21,13 @@
     {
       nix-darwin,
       nixpkgs,
+      home-manager,
       ...
     }@inputs:
     let
       nixos-systems = import ./os/nixos.nix;
       darwin-systems = import ./os/darwin.nix;
+      home-systems = import ./os/home.nix;
 
       mkConfiguration =
         { systems, mkSystem }:
@@ -44,6 +46,25 @@
             }) sys.hosts
           ) systems
         );
+
+      # Standalone home-manager configurations, keyed "<user>@<host>".
+      mkHomeConfiguration =
+        systems:
+        builtins.listToAttrs (
+          builtins.concatMap (
+            sys:
+            builtins.map (host: {
+              name = "${sys.user}@${host}";
+              value = home-manager.lib.homeManagerConfiguration {
+                pkgs = nixpkgs.legacyPackages.${sys.system};
+                extraSpecialArgs = {
+                  inherit inputs;
+                };
+                modules = sys.moduleResolver host;
+              };
+            }) sys.hosts
+          ) systems
+        );
     in
     {
       nixosConfigurations = mkConfiguration {
@@ -55,5 +76,7 @@
         systems = darwin-systems;
         mkSystem = nix-darwin.lib.darwinSystem;
       };
+
+      homeConfigurations = mkHomeConfiguration home-systems;
     };
 }

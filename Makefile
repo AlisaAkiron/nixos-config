@@ -1,16 +1,20 @@
-build:
+# Platform detection:
+#   Darwin         -> nix-darwin
+#   Linux + NixOS  -> NixOS
+#   Linux (other)  -> standalone home-manager (e.g. galaxy on Arch)
 ifeq ($(shell uname),Darwin)
-	nh darwin build .
+NH := nh darwin
+else ifneq ($(wildcard /etc/NIXOS),)
+NH := nh os
 else
-	nh os build
+NH := nh home
 endif
 
+build:
+	$(NH) build .
+
 switch:
-ifeq ($(shell uname),Darwin)
-	nh darwin switch .
-else
-	nh os switch
-endif
+	$(NH) switch .
 
 update:
 	nix flake update

@@ -1,11 +1,19 @@
-{ pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 let
-  isNotDarwin = !pkgs.stdenvNoCC.isDarwin;
+  # On macOS ghostty comes from Homebrew; on standalone home-manager hosts
+  # (foreign distro) a nixpkgs GUI app lacks working OpenGL, so install it
+  # with the distro package manager instead. Only the config is managed here.
+  installPackage = !pkgs.stdenvNoCC.isDarwin && !config.alisa-nix.standalone-home;
 in
 {
 
-  home.packages = lib.mkIf isNotDarwin [
+  home.packages = lib.mkIf installPackage [
     pkgs.ghostty
   ];
 
