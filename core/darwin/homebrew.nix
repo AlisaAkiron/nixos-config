@@ -22,6 +22,7 @@
       "steipete/tap"
       "darrylmorley/whatcable"
       "espressif/eim"
+      "abue-ammar/tinycast"
     ];
     brews = [
       # Network
@@ -55,14 +56,13 @@
       "1password-cli"
       "gpg-suite"
       "maczip"
-      "raycast"
+      "abue-ammar/tinycast/tinycast"
       "darrylmorley/whatcable/whatcable" # Cable Info
 
       # MacOS Fix
       "mac-mouse-fix"
       "notunes"
       "openmtp"
-      "thaw"
 
       # Fonts
       "font-cascadia-code"
@@ -78,12 +78,10 @@
       "font-sarasa-gothic" # 更纱黑体
 
       # Apps
-      "appcleaner"
       "calibre"
       "coconutbattery"
       "telegram"
       "onlyoffice"
-      "rustdesk"
 
       # Multimedia
       "losslesscut"
@@ -96,7 +94,6 @@
       # Creative
       "sigil"
       "kicad"
-      "freecad"
       "blender@lts"
       "figma"
 
