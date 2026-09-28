@@ -59,6 +59,7 @@
       "abue-ammar/tinycast/tinycast"
       "darrylmorley/whatcable/whatcable" # Cable Info
       "stats" # System monitoring tool
+      "snapzy" # Screenshot and screen recording tool
 
       # MacOS Fix
       "mac-mouse-fix"
@@ -113,14 +114,10 @@
       "syntax-highlight" # Syntax Highlighting
       "qlmarkdown" # Markdown Preview
       "suspicious-package" # .pkg Installer Preview
-      "qlstephen" # Plain Text Preview
       "quicklook-video" # Video Preview
 
       # Network
       "tailscale-app"
-
-      # Setapp
-      "setapp"
     ];
   };
 }
