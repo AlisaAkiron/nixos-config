@@ -38,7 +38,7 @@ lib.mkMerge [
   # never starts the daemon at login/boot (KeepAlive only restarts a process
   # that already ran once). Force it. Darwin-only: on Linux the daemon runs via
   # systemd, so the launchd tweak would be inert there.
-  (lib.mkIf pkgs.stdenvNoCC.isDarwin {
+  (lib.mkIf pkgs.stdenv.hostPlatform.isDarwin {
     launchd.agents.atuin-daemon.config.RunAtLoad = true;
   })
 ]

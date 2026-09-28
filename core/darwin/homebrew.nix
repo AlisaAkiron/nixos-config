@@ -58,6 +58,7 @@
       "maczip"
       "abue-ammar/tinycast/tinycast"
       "darrylmorley/whatcable/whatcable" # Cable Info
+      "stats" # System monitoring tool
 
       # MacOS Fix
       "mac-mouse-fix"

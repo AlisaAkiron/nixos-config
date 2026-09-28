@@ -1,8 +1,8 @@
 { pkgs, lib, ... }:
 
 let
-  gitCredentialStore = if pkgs.stdenvNoCC.isDarwin then "keychain" else "cache";
-  isNotDarwin = !pkgs.stdenvNoCC.isDarwin;
+  gitCredentialStore = if pkgs.stdenv.hostPlatform.isDarwin then "keychain" else "cache";
+  isNotDarwin = !pkgs.stdenv.hostPlatform.isDarwin;
 in
 {
   home.packages =

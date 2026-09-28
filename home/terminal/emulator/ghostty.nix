@@ -9,7 +9,7 @@ let
   # On macOS ghostty comes from Homebrew; on standalone home-manager hosts
   # (foreign distro) a nixpkgs GUI app lacks working OpenGL, so install it
   # with the distro package manager instead. Only the config is managed here.
-  installPackage = !pkgs.stdenvNoCC.isDarwin && !config.alisa-nix.standalone-home;
+  installPackage = !pkgs.stdenv.hostPlatform.isDarwin && !config.alisa-nix.standalone-home;
 in
 {
 
