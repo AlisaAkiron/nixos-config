@@ -8,104 +8,104 @@ return {
     "nvim-treesitter/nvim-treesitter-textobjects",
   },
   config = function()
-    require("nvim-treesitter.configs").setup({
-      -- Install parsers for these languages
-      ensure_installed = {
-        -- System/Shell
-        "bash",
-        "vim",
-        "vimdoc",
+    local ts = require("nvim-treesitter")
 
-        -- Systems Programming
-        "c",
-        "go",
-        "rust",
+    -- Install parsers for these languages (asynchronously)
+    ts.install({
+      -- System/Shell
+      "bash",
+      "vim",
+      "vimdoc",
 
-        -- Object-Oriented Languages
-        "c_sharp",
-        "java",
-        "kotlin",
+      -- Systems Programming
+      "c",
+      "go",
+      "rust",
 
-        -- Web (Frontend)
-        "html",
-        "css",
-        "javascript",
-        "typescript",
-        "tsx",
-        "vue",
+      -- Object-Oriented Languages
+      "c_sharp",
+      "java",
+      "kotlin",
 
-        -- Scripting
-        "lua",
-        "python",
+      -- Web (Frontend)
+      "html",
+      "css",
+      "javascript",
+      "typescript",
+      "tsx",
+      "vue",
 
-        -- Data/Config
-        "dockerfile",
-        "json",
-        "json5",
-        "xml",
-        "terraform",
-        "toml",
-        "yaml",
-        "ini",
-        "hcl",
-        "nix",
+      -- Scripting
+      "lua",
+      "python",
 
-        -- Query Languages
-        "graphql",
-        "sql",
+      -- Data/Config
+      "dockerfile",
+      "json",
+      "json5",
+      "xml",
+      "terraform",
+      "toml",
+      "yaml",
+      "ini",
+      "hcl",
+      "nix",
 
-        -- Version Control
-        "git_config",
-        "git_rebase",
-        "gitattributes",
-        "gitcommit",
-        "gitignore",
+      -- Query Languages
+      "graphql",
+      "sql",
 
-        -- Documentation
-        "markdown",
-        "markdown_inline",
-      },
+      -- Version Control
+      "git_config",
+      "git_rebase",
+      "gitattributes",
+      "gitcommit",
+      "gitignore",
 
-      -- Install parsers synchronously (only applied to `ensure_installed`)
-      sync_install = false,
-
-      -- Automatically install missing parsers when entering buffer
-      auto_install = true,
-
-      highlight = {
-        enable = true, -- Enable syntax highlighting
-        disable = {},  -- Add languages here to disable treesitter highlighting
-        additional_vim_regex_highlighting = false,
-      },
-
-      indent = {
-        enable = true, -- Enable treesitter-based indentation
-      },
-
-      -- Incremental selection based on treesitter
-      incremental_selection = {
-        enable = true,
-        keymaps = {
-          init_selection = "<C-space>",
-          node_incremental = "<C-space>",
-          scope_incremental = "<C-s>",
-          node_decremental = "<C-backspace>",
-        },
-      },
-
-      -- Text objects for functions, classes, etc.
-      textobjects = {
-        select = {
-          enable = true,
-          lookahead = true,
-          keymaps = {
-            ["af"] = "@function.outer",
-            ["if"] = "@function.inner",
-            ["ac"] = "@class.outer",
-            ["ic"] = "@class.inner",
-          },
-        },
-      },
+      -- Documentation
+      "markdown",
+      "markdown_inline",
     })
+
+    -- Enable highlighting and indentation for any buffer with a parser,
+    -- installing missing parsers on demand (replaces `auto_install`)
+    vim.api.nvim_create_autocmd("FileType", {
+      group = vim.api.nvim_create_augroup("treesitter_start", { clear = true }),
+      callback = function(args)
+        local lang = vim.treesitter.language.get_lang(args.match)
+        if not lang then
+          return
+        end
+        local function start()
+          if not vim.api.nvim_buf_is_valid(args.buf) then
+            return
+          end
+          if pcall(vim.treesitter.start, args.buf, lang) then
+            vim.bo[args.buf].indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+          end
+        end
+        if vim.list_contains(ts.get_installed(), lang) then
+          start()
+        elseif vim.list_contains(ts.get_available(), lang) then
+          ts.install(lang):await(function() vim.schedule(start) end)
+        end
+      end,
+    })
+
+    -- Text objects for functions, classes, etc.
+    require("nvim-treesitter-textobjects").setup({
+      select = { lookahead = true },
+    })
+    local select = require("nvim-treesitter-textobjects.select")
+    for keys, query in pairs({
+      ["af"] = "@function.outer",
+      ["if"] = "@function.inner",
+      ["ac"] = "@class.outer",
+      ["ic"] = "@class.inner",
+    }) do
+      vim.keymap.set({ "x", "o" }, keys, function()
+        select.select_textobject(query, "textobjects")
+      end, { desc = "Select " .. query })
+    end
   end,
 }

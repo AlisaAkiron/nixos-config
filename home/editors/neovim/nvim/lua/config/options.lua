@@ -68,7 +68,7 @@ opt.cmdheight = 1 -- Height of command line
 
 -- Folding (using Treesitter)
 opt.foldmethod = "expr"
-opt.foldexpr = "nvim_treesitter#foldexpr()"
+opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 opt.foldenable = false -- Don't fold by default
 
 -- Show whitespace characters

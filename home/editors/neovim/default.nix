@@ -15,6 +15,7 @@
     withPython3 = true;
     withRuby = true;
     withNodeJs = true;
+    extraPackages = [ pkgs.tree-sitter ]; # required by nvim-treesitter (main) to build parsers
   };
 
   home.packages = lib.mkIf (config.alisa-nix.os == "linux") [
