@@ -92,6 +92,7 @@
       "ndi-tools"
       "obs"
       "finetune"
+      "handbrake-app"
 
       # Creative
       "sigil"
