@@ -23,6 +23,7 @@
       "darrylmorley/whatcable"
       "espressif/eim"
       "abue-ammar/tinycast"
+      "distroav/tap"
     ];
     brews = [
       # Network
@@ -93,6 +94,8 @@
       "obs"
       "finetune"
       "handbrake-app"
+      "ndi-tools"
+      "distroav/tap/distroav"
 
       # Creative
       "sigil"
