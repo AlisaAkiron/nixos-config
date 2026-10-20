@@ -40,6 +40,7 @@
       "codeburn"
       "espressif/eim/eim" # Espressif IoT Development Framework (ESP-IDF) Manager
       "cmake" # Build system (required by many C/C++ projects and also EIM)
+      "rustup" # Rust Toolchain Installer (for global rust environment)
 
       # Libraries
       "sox" # Audio processing (required by Claude Code)
