@@ -8,9 +8,6 @@
       autoUpdate = false;
       cleanup = "uninstall";
       upgrade = false;
-      # Homebrew 5.x requires --force/--force-cleanup/$HOMEBREW_ASK alongside
-      # --cleanup; nix-darwin doesn't add it yet, so pass it explicitly.
-      extraFlags = [ "--force-cleanup" ];
       extraEnv = {
         HOMEBREW_NO_UPGRADE_AUTO_UPDATES_CASKS = "1";
       };
@@ -91,18 +88,19 @@
       "losslesscut"
       "moonlight"
       "parsec"
-      "ndi-tools"
       "obs"
       "finetune"
       "handbrake-app"
       "ndi-tools"
       "distroav/tap/distroav"
+      "libndi" # Dependency of distroav; declared so cleanup doesn't try to remove it
 
       # Creative
       "sigil"
       "kicad"
       "blender@lts"
       "figma"
+      "adobe-dng-converter"
 
       # Dev Tools
       "switchhosts"
@@ -114,6 +112,7 @@
       "productdevbook/tap/portkiller"
       "steipete/tap/codexbar"
       "bruno"
+      "ghostty"
 
       # Quicklook Extensions
       "syntax-highlight" # Syntax Highlighting
