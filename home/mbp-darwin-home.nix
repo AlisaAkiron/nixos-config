@@ -62,6 +62,7 @@
       '';
       shellAliases = {
         quarantine-permit = "sudo xattr -r -d com.apple.quarantine";
+        ssh = "ghostty +ssh --";
       };
     };
   };

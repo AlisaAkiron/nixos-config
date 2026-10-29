@@ -48,5 +48,8 @@
       # pnpm
       export PNPM_HOME='/home/alisa/.local/share/pnpm'
     '';
+    shellAliases = {
+      ssh = "ghostty +ssh --";
+    };
   };
 }
