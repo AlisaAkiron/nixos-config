@@ -11,4 +11,8 @@
     # fnm
     eval "$(fnm env --use-on-cd --shell zsh)"
   '';
+
+  home.sessionPath = [
+    "$HOME/.bun/bin"
+  ];
 }
