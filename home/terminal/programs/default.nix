@@ -29,7 +29,6 @@
     gnumake
     file
     sttr # string manipulation
-    tabiew # view and query tabular data files
     android-tools # Android Platform Tools
     snitch # Better netstat
 

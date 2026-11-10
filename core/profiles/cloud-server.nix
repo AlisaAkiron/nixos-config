@@ -20,6 +20,7 @@
       dates = "weekly";
       flags = [
         "--all"
+        "--filter=label!=keep"
       ];
     };
   };
