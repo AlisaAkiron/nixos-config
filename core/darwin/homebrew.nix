@@ -113,6 +113,7 @@
       "steipete/tap/codexbar"
       "bruno"
       "ghostty"
+      "wireshark-app"
 
       # Quicklook Extensions
       "syntax-highlight" # Syntax Highlighting
